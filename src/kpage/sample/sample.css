@@ -1,0 +1,415 @@
+/*------------------------------------------
+* Les commentaires sont a titre
+* purement formateur. Ils doivent etre
+* supprimer lors de la publication
+* pour alleger le poids des pages et
+* ameliorer les performances de chargement 
+* des pages
+*-------------------------------------------*/
+
+/*-------------------------------------------
+* Definition de la presentation generale de
+* la page. Noter le text_align qui permet
+* d'avoir un contenu centre
+*-------------------------------------------*/
+body {
+  font-size: 11px;
+  background: #eee;
+  color: #000;
+  font-family: Tahoma, Arial, serif;
+  padding:0;
+  margin:0;        
+  text_align:center;
+}
+
+/*-----------------------------------------------
+* Ici, definition de la division qui va contenir
+* et delimiter les informations presentees.
+* La largeur et limitee a 780 pour garantir un 
+* affichage toujours correct (sauf pour eux qui
+* ont encore un affichage en 640).
+* Le positionnement des marge a auto permet de
+* centre la division dans le navigateur.
+*-------------------------------------------------*/
+#page {
+  width: 750px;
+  margin-right:auto;
+  margin-left:auto;
+  background: #fff;
+border: 1px solid red;
+}
+
+
+/*--------------------------------
+* Caracteristiques du titre :
+* pas tres original: gros et au centre
+* Noter le margin-top pour le coller en haut
+*---------------------------------*/
+#titre{
+  color: #ddffdd;
+  background : #779977;
+  height: 27px;
+  text-align: center;
+  font-family : Verdana,Helvetica,sans-serif; 
+  font-weight: bold;
+  font-size: 20px;
+  margin-top : 0;
+}
+
+
+
+/*********************************
+* Presentation des menus
+**********************************/
+.kmenuTitle{
+  list-style: none;
+  text-align:center;
+  background: #aaa;
+  font-weight: bold;
+  font-size: 15px;
+  padding : 3px;
+}
+
+.kmenuItem{
+  list-style : none;
+  padding: 5px;
+  padding-left: 15px;
+}
+
+.kmenuImg{
+  border : 1px none green;
+}
+
+
+
+/*****************************
+* Contenu des form
+******************************/
+form { 
+  display : block;
+  text-align : center;
+  padding : 3px;
+}
+
+fieldset {
+  display : inline;
+  padding : 5px;
+  text-align : left;
+  border : 0;
+}
+
+fieldset legend {
+  padding : 2px;
+  font-family : Verdana,Helvetica,sans-serif; 
+  font-weight : 900; 
+  font-size:13px;
+}
+
+fieldset p {
+  margin : 5px;
+}
+
+
+/*-- Zones de saisie --*/
+fieldset input {
+  padding: 2px;
+  font-size: 11px;
+}
+
+fieldset textarea {
+  padding: 2px;
+  font-size:11px;
+}
+
+fieldset option {
+  padding: 2px;
+  font-size:11px;
+}
+
+fieldset select {
+  padding: 2px;
+  font-size:11px;
+}
+
+
+/*-- Labels cadres a droite --*/
+fieldset label  { 
+  display : block; 
+  float : left;
+  width : 15em; 
+  margin-right : 5px;
+  border-bottom : 1px dashed #ccc; 
+  text-align: right;
+  font-weight : bold; 
+/*  white-space: nowrap;*/
+  font-size:11px;
+}
+
+/**************************************
+* Caracteristiques typographiques des
+* elements d'une form
+***************************************/
+/*-------------------------*
+* Design des zones de saisie
+*--------------------------*/
+
+/*-- Champ obligatoire  --*/
+.wbsMandatory{
+  background: #f5fff8;
+  color: inherit;
+}
+
+/*-- Champ facultatif  --*/
+.wbsOption{
+  background : #d0ddd0;
+  color: inherit;
+}
+
+/*-- Champ non editable  --*/
+.wbsInfo{
+  background :  transparent;
+  color: inherit;
+}
+
+/*-------------------------*
+* Design des boutons
+*--------------------------*/
+.wbsBtn{
+  padding: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*-------------------------*
+* Design des elements messages
+*--------------------------*/
+/*-- Message classique --*/
+.wbsMsg{
+/*   background: red;*/
+}
+
+/*-- Avertissement --*/
+.wbsWng{
+   font-weight: bold;
+   color :  #00E;
+   background: inherit;
+}
+
+/*-- Erreur --*/
+.wbsError{
+   font-weight: bold;
+   color :  #e00;
+   background: inherit;
+}
+
+/*----------------------------------------------------*
+* Design des elements rows. Les rows sont des tables
+* Pour avoir un comportement identique dans IE et Firebird, 
+* elles sont toujours dans un div. Les tailles sont a 100%
+*---------------------------------------------------------*/
+.wbsBlkRow{
+  width: 100%;
+  border: 1px solid #888;
+  margin-bottom:5px;
+}
+
+/* La rows elle-meme : centree par defaut*/
+.wbsRow{
+  width: 100%;
+  font-size: 11px;
+  border: 1px solid #888;
+}
+
+td {
+  padding-left: 3px;
+  padding-right: 3px;
+  text-align : left;
+  font-size: 11px;
+}
+
+/* Titre de colonnes */
+.wbsHead {   
+  color: #CCFFCC;
+  background : #446644;
+  font-weight: normal;
+  vertical-align:center;
+  text-align : center;
+  font-size: 12px;
+  padding:4px; 	
+}
+
+
+/* Lignes paires et impaires  des rows */
+.wbsRow0 {   
+  color: #000000;
+  background : #cecece;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 11px;
+}
+
+.wbsRow1  {
+  color: #000000;
+  background : #f5fff8;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 11px;
+}
+
+/* Premiere colonne des rows (numero de ligne) --*/
+.wbsNumcell0  {
+  color: #000000;
+  background : #cecece;
+  text-align:right;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.wbsNumcell1 {   
+  color: #000000;
+  background : #e0e0e0;
+  text-align:right;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Deuxieme colonne des rows (image d'action) --*/
+.wbsActcell1  {
+  color: #000000;
+  background: #e0e0e0;
+}
+
+.wbsActcell0 {   
+  color: #000000;
+  background : #cecece;
+}
+
+
+/*-----------------------------------*
+* Design des elements radio et check
+*-----------------------------------*/
+.wbsRach {   
+  list-style-type : none;
+  background: #cecece;
+  color:inherit;
+  text-align:center;
+  padding : 5px;
+}
+
+.wbsRach input{
+  margin-right: 5px;   
+}
+
+.wbsRach li {
+  display: inline;
+  margin-right : 20px;
+  font-weight : bold; 
+  font-size:11px;
+}
+
+
+/*-----------------------------------*
+* Design des elements combo et liste
+*-----------------------------------*/
+.wbsCbn0 {   
+  background : #f5fff8;
+  color:inherit;
+  padding-left:5px;
+}
+.wbsCbn1 {   
+  background: #e0e0e0;
+  color:inherit;
+  padding-left:5px;
+}
+
+/*-----------------------------------*
+* Design des liens
+*-----------------------------------*/
+
+a{
+  color: blue;
+  background: inherit;
+  text-decoration: none;
+  font-size:11px;
+}
+a:hover { 
+  background: #fff;
+/*  font-weight: bold;*/
+  color: #00f;
+  font-size:11px;
+}
+a:link { 
+  color: #09C;
+  background: inherit;
+  font-size:11px;
+}
+
+a.wbsExtUrl {
+  color: #c00;
+  background: inherit;
+}
+a.wbsExtUrl:hover { 
+  color: #c00;
+  background: inherit;
+  text-decoration: underline;
+}
+
+a.wbsLn0 {
+  color: #0a0;
+  background: inherit;
+}
+a.wbsLn0:hover { 
+  color: #00e;
+  background: inherit;
+  text-decoration: underline;
+}
+
+a.wbsLn1 {
+  color: #070;
+  background: inherit;
+}
+a.wbsLn1:hover { 
+  color: #00f;
+   background: inherit;
+  text-decoration: underline;
+}
+
+a.wbsLn2 {
+  color: #0aa;
+   background: inherit;
+}
+a.wbsLn2:hover { 
+  color: #00f;
+   background: inherit;
+  text-decoration: underline;
+}
+
+a.wbsLn3 {
+  color: #008;
+   background: inherit;
+}
+a.wbsLn4:hover { 
+  color: #00f;
+   background: inherit;
+  text-decoration: underline;
+}
+
+a.wbsLn4{
+  color: #00f;
+   background: inherit;
+}
+a.wbsLn4:hover { 
+  color: #00f;
+   background: inherit;
+  text-decoration: underline;
+}
+
+a.wbsLn5 {
+  color: #008;
+   background: inherit;
+}
+a.wbsLn5:hover { 
+  color: #00f;
+   background: inherit;
+  text-decoration: underline;
+}

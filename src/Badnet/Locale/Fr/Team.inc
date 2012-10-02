@@ -1,0 +1,32 @@
+<?php 
+define('LOC_LABEL_DEL_CAPTAIN','Supprimer le capitaine'); 
+define('LOC_LABEL_ASSOC','Association'); 
+define('LOC_TITLE_UPDATE_TEAM','Modification d\'une équipe'); 
+define('LOC_MSG_CONFIRM_TEAM','L\'équipe va être supprimée. La suppression est définitive et ne peut être annulée.'); 
+define('LOC_LABEL_DATE_REG','Date d\'inscription'); 
+define('LOC_MSG_ADD_TEAM','Utiliser la zone de recherche "Club à chercher" pour trouver le club de la nouvelle équipe. Le club choisi sera automatiquement créé et l\'équipe lui sera rattachée.'); 
+define('LOC_LABEL_ONE_MORE_ASSO','Ajouter une autre équipe aprés celle-ci'); 
+define('LOC_LABEL_NOC','Code olympique (NOC)'); 
+define('LOC_LABEL_STAMP','Sigle'); 
+define('LOC_LABEL_URL','Site internet'); 
+define('LOC_LABEL_TEAM_STAMP','Sigle de l\'équipe'); 
+define('LOC_LABEL_TEAM_NAME','Nom de l\'équipe'); 
+define('LOC_LABEL_SEARCH_ASSO','Club à chercher'); 
+define('LOC_MSG_TEAMS_CAPTAIN','Le capitaine d\'une équipe doit créer un compte et faire une demande de capitanat. Cette demande est envoyée par courrier électronique à tous les gestionnaires de l\'interclubs. Ils peuvent soit accepter soit refuser la demande. Si la demande est accepté, les coordonnées du capitaine sont accessibles en utilisant les icones dans la colonne "Capitaine"'); 
+define('LOC_MSG_TEAMS_MANAGEMENT','L\'ajout d\'une équipe coute %bncostteam% ticknets par équipe inscrite. Ils sont déduits du porte monnaie du propiétaire de l\'interclubs à chaque ajout d\'une nouvelle équipe. La déduction est définitive et non récupérable même si l\'équipe est suprimée.'); 
+define('LOC_TITLE_CAPTAINS','Equipes et leur capitaines'); 
+define('LOC_MSG_NO_TICKNETS','Le propiétaire de l\'interclubs n\'a pas assez de ticknets dans son porte-monnaie pour pouvoir ajouter une équipe.'); 
+define('LOC_TITLE_ADD_TEAM','Ajouter une équipe'); 
+define('LOC_TITLE_EMAIL_CAPTAIN','Ecrire au capitaine'); 
+define('LOC_TITLE_EMAIL_CAPTAINS','Ecrire aux capitaines des équipes affichées'); 
+define('LOC_TOOLTIP_EMAILS','Email - Envoyer un email aux capitaines des équipes sélectionnées.'); 
+define('LOC_TOOLTIP_VCARD','Impression Pdf - Coordonnées des capitaines de toutes les équipes, regroupées par division et groupe.'); 
+define('LOC_COLUMN_CAPTAIN','Capitaine'); 
+define('LOC_COLUMN_WEIGHT','Poids'); 
+define('LOC_COLUMN_STAMP','Sigle'); 
+define('LOC_COLUMN_TEAM','Equipe'); 
+define('LOC_COLUMN_CLUB','Club'); 
+define('LOC_BTN_NEW_TEAM','Ajouter une équipe'); 
+define('LOC_LABEL_FIND','Equipe ou capitaine'); 
+define('LOC_TITLE_TEAMS_MANAGEMENT','Gestion des équipes et de leur capitaines'); 
+?>

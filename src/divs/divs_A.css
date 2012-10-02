@@ -1,0 +1,93 @@
+#divSel{
+ float:left;
+}
+#divInfo{
+ margin: 2px; 
+ width : 220px; 
+ float:left;
+}
+#divImg{
+ font-size: 1.5em; 
+}
+
+#divGroups{
+ width : 370px; 
+ margin: 2px; 
+ float:left;
+ border: 1px solid #444;
+}
+
+#blkNewGroup {
+  border : 1px solid #000; 
+}
+
+#blkNbMatch {
+  margin:3px;
+  border : 1px solid #000; 
+  vertical-align: top;
+}
+#blkNbMatch span{
+  width : 17em; 
+}
+#blkMatchPoint {
+  margin:3px;
+  border : 1px solid #000; 
+  vertical-align: top;
+}
+#blkMatchPoint span{
+  width : 13em; 
+}
+
+#blkResTie {
+  margin:3px;
+  border : 1px solid #000; 
+  vertical-align: top;
+}
+
+#blkMatchPoint span{
+  width : 13em; 
+}
+
+#blkTiePoint {
+  margin:3px;
+  border : 1px solid #000; 
+  vertical-align: top;
+}
+#blkTiePoint span{
+  width : 18em;
+}
+
+#blkType {
+  margin-top: 5px;
+  display:block;
+  text-align:center;
+  background-color: #d5d5d5;
+  width:27em;
+}
+#blkRankType {
+  margin-top: 5px;
+  display:block;
+  text-align:center;
+  background-color: #d5d5d5;
+  width:27em;
+}
+
+/*.blkGroup {
+  float: left;
+  display:inline;
+  margin-right: 15px;	
+  padding-bottom: 5px;	
+  border : 1px solid #000;
+}
+*/
+
+#blkPubli {
+  display:block;
+}
+#blkPropa {
+  display:block;
+}
+
+
+
+

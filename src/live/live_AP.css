@@ -1,0 +1,38 @@
+#blkLive{ 
+display : none; 
+}
+
+#blkMatchs{
+  height:500px;
+  overflow:auto;
+}
+
+.umpire{
+  color: orange;
+}
+.busy{
+  background-color: orange;
+}
+
+.rest{
+  background-color: yellow;
+}
+
+.live{
+  background-color: #0ff;
+}
+
+.classLive{
+  border: 1px solid #000;
+  vertical-align:top;
+}
+
+.liveObject{
+width:310px;
+}
+
+#blkOptions span{
+width:6em;
+}
+
+

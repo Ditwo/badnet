@@ -1,0 +1,575 @@
+<?php
+/*****************************************************************************
+ !   $Id$
+ ******************************************************************************/
+require_once 'Main.inc';
+require_once 'Badnetadm/Login/Login.inc';
+require_once 'Badnetadm/Events/Events.inc';
+require_once 'Badnetres/Events/Events.inc';
+require_once 'Badnetplay/Results/Results.inc';
+require_once 'Badnetplay/Inline/Inline.inc';
+require_once 'Badnetvisitor/Vsoft/Vsoft.inc';
+
+class Main
+{
+	public function __construct()
+	{
+		$controller = Bn::getController();
+		$controller->addAction(MAIN_UK, $this, 'changeLocale', 'En');
+		$controller->addAction(MAIN_DE, $this, 'changeLocale', 'De');
+		$controller->addAction(MAIN_FR, $this, 'changeLocale', 'Fr');
+		$controller->addAction(MAIN_COLRIGHT,   $this, 'displayColright');
+		$controller->addAction(MAIN_ACCUEIL,    $this, 'displayAccueil');
+		$controller->addAction(MAIN_SEARCH,     $this, 'search');
+		$controller->addAction(MAIN_PAGE_HELP,  $this, 'pageHelp');
+		$controller->addAction(PROJECT_ACCUEIL, $this, 'displayTrame', MAIN_ACCUEIL);
+	}
+
+	/**
+	 * Affcihage de la page d'aide pour la rechercher
+	 *
+	 * @return int
+	 */
+	public function pageHelp()
+	{
+		$body = new Body();
+
+		$body->addTitle('', LOC_OPTION_TOURNAMENTS_POONA, 3);
+		$body->addP('', LOC_P_HELP_TOURNAMENT_POONA, 'bn-p-info');
+		$body->addTitle('', LOC_OPTION_TOURNAMENTS_BADNET, 3);
+		$body->addP('', LOC_P_HELP_TOURNAMENT_BADNET, 'bn-p-info');
+		$body->addTitle('', LOC_OPTION_PLAYERS, 3);
+		$body->addP('', LOC_P_HELP_PLAYER, 'bn-p-info');
+		$body->addButtonCancel('btnClose', LOC_BTN_CLOSE);
+
+		// Envoi des donnees
+		$body->display();
+		return false;
+	}
+
+	/**
+	 * Aiguillage vers la fonction de recherche en fonction du choix de l'utilisateur
+	 *
+	 * @return int
+	 */
+	public function search()
+	{
+		$choice = Bn::getValue('lstChoice');
+		if ($choice <= 2 ) $choice = PROJECT_BADNETRES;
+		if ($choice == BADNETPLAY_INLINE )
+		{
+			$search = Bn::getValue('txtSearch');
+			Bn::setValue('license', intval($search));
+		}
+		return $choice;
+	}
+
+	/**
+	 * Changement de langue de la page d'accueil
+	 *
+	 * @param string $aLocale	nouvelle langue
+	 * @return PROJECT_ACCUEIL pour re-afficher la page
+	 */
+	public function changeLocale($aLocale)
+	{
+		BN::setValue('locale', $aLocale);
+		return Bn::getConfigValue('accueil', 'params');
+	}
+
+	/**
+	 * Affichage du contenu de la colonne de droite
+	 *
+	 * @return false
+	 */
+	public function displayColright()
+	{
+		require_once 'Object/Oevent.inc';
+		// Container principal
+		$container = new Body();
+
+		// Pour le calendrier
+		$d = $container->addDiv('divCalendar');
+		$d->addDiv('calendar');
+		$d->addBreak();
+
+		// Connexion au site
+		$divf = $container->addDiv('divConnect');
+		$t = $divf->addP('', '', 'bn-title-3');
+		$t->addBalise('span', '',  LOC_TITLE_CONNECTION);
+
+		$userId = Bn::getValue('user_id', null);
+		if ( empty($userId) )
+		{
+			
+			$form = $divf->addForm('frmLogin', BNETADM_LOG, 'targetBody');
+
+			$form->addEdit('txtLogin',  LOC_LABEL_LOGIN, null, 20);
+			$form->addEditPwd('txtPwd', LOC_LABEL_PWD, 20);
+
+			$block = $form->addDiv('', 'blkBtnLogin');
+			$block->addButtonValid('btnLogin', LOC_BTN_CONNECT);
+			$block = $form->addDiv('', 'divLinks');
+			$block->addP()->addLink('lnkAccount', LOGIN_PAGE_ACCOUNT, LOC_LNK_ACCOUNT, 'targetBody');
+			$lnk = $block->addP()->addLink('lnkPwd', LOGIN_FILL_PASSWORD, LOC_LNK_PWD, 'targetDlg');
+			$lnk->completeAttribute('class', 'bn-dlg');
+			include_once 'Badnetadm/Locale/' . Bn::getLocale() . '/Login.inc';
+			$lnk->addMetaData('title', "'". LOC_TITLE_NEW_PASSWORD . "'");
+			$lnk->addMetaData('width', 355);
+			$lnk->addMetaData('height', 180);
+			$form->addBreak();
+		}
+		else
+		{
+			$p = $divf->addP('pDirect', LOC_P_DIRECT_ACCESS, 'bn-p-info');
+			$p->insertcontent(Bn::getValue('user_name') . ', ');
+			$block = $divf->addDiv('', 'divLinks');
+			if ( Oaccount::isUserPlayer() ) $action = PROJECT_BADNETPLAYER;
+			else if ( Oaccount::isUserClub() ) $action = PROJECT_BADNETCLUB;
+			else $action = Bn::getValue('logPage', BNETADM_DISPATCH);
+			
+			$block->addP()->addLink('lnkDirect', $action , LOC_LNK_DIRECT_ACCESS, 'targetBody');
+		}
+		$container->addBreak();
+
+		// Acces au logiciel
+		$div = $container->addDiv('linksSoft');
+		$t = $div->addP('', '', 'bn-title-3');
+		$t->addBalise('span', '',  'BadNet');
+		$div->addP('', LOC_TITLE_SOFT,'bn-title-4');
+		$ul = $div->addBalise('ul');
+		$ul->setAttribute('class', 'bn-list-1');
+		$links = array(
+		array("EasyBadNet v2.7r0", "http://www.badnet.org/download/easybadnet_v2.7r0.exe"),
+		array("EasyBadNetTeam v2.0r1", "http://www.badnet.org/download/easybadnetteam_v2.0r1.exe"),
+		array(LOC_ITEM_DOWNLOAD, "http://www.badnet.org/pmwiki/pmwiki.php?n=Logiciel.Telechargement"),
+		array(LOC_ITEM_FORUM, "http://www.badnet.org/punbb/index.php"),
+		array(LOC_ITEM_EVOLUTION, "http://www.badnet.org/pmwiki/pmwiki.php?n=Logiciel.JournalDesEvolutions"),
+		array(LOC_ITEM_INSTALLATION, "http://www.badnet.org/pmwiki/pmwiki.php?n=Logiciel.Installation")
+		);
+		$i = 1;
+		foreach($links as $link)
+		{
+			$li = $ul->addBalise('li', 'eventsLinks'.$i);
+			$lnk = $li->addLink('lnk'.$i++, '', $link[0]);
+			$lnk->setAttribute('href', $link[1]);
+			if ($i == 2) $li->addImage('', 'nouveau.png', 'New');
+			//$li->setTooltip($link[1]);
+		}
+
+		// Acces aux tutoriels
+		$div->addP('', LOC_TITLE_TUTOS,'bn-title-4');
+		$ul = $div->addBalise('ul');
+		$ul->setAttribute('class', 'bn-list-1');
+		$links = array(
+		array('Créer un compte', "http://www.badnet.org/docs/Creer-un-compte.pdf"),
+		//array('Gérer un interclubs', "http://www.badnet.org/docs/Gerer-interclubs.zip"),
+		array('Capitaine d\'équipe interclubs', "http://www.badnet.org/docs/Capitaine-equipe-interclubs.pdf"),
+		array('Manuel d\'utilisation BadNetTeam', "http://www.badnet.org/docs/Manuel-utilisation-badnetteam.pdf"),
+		array('Inscrire une équipe à un interclubs', "http://www.badnet.org/docs/Inscription-en-ligne-equipe-interclubs.pdf"),
+		//array('Gérer un tournoi', "http://www.badnet.org/docs/Gerer-tournoi.pdf"),
+		);
+		$i = 1;
+		foreach($links as $link)
+		{
+			$li = $ul->addBalise('li', 'eventsLinks');
+			$lnk = $li->addLink('lnk'.$i++, '', $link[0]);
+			$lnk->setAttribute('href', $link[1]);
+			if ($i == 5) $li->addImage('', 'nouveau.png', 'New');
+			if ($i == 3) $li->addImage('', 'updated.jpg', 'New');
+			if ($i == 4) $li->addImage('', 'updated.jpg', 'New');
+			//$lnk->setTooltip($link[2]);
+		}
+		
+		// Acces a la documentation
+		$div->addP('', LOC_TITLE_DOCUMENTATION,'bn-title-4');
+		$ul = $div->addBalise('ul');
+		$ul->setAttribute('class', 'bn-list-1');
+		$links = array(
+		array('Installation', "http://www.badnet.org/docs/Badnet-Installation.zip"),
+		array('Tournoi individuel', "http://www.badnet.org/docs/Badnet-Tournoi-individuel.zip"),
+		array('Tournoi par équipe', "http://www.badnet.org/docs/Badnet-Competitions-par-equipes.zip"),
+		);
+		$i = 1;
+		foreach($links as $link)
+		{
+			$li = $ul->addBalise('li', 'eventsLinks');
+			$lnk = $li->addLink('lnk'.$i++, '', $link[0]);
+			$lnk->setAttribute('href', $link[1]);
+			//$lnk->setTooltip($link[2]);
+		}
+
+		// Badnet sur le net
+		$links = array(
+		array('Interclub nationaux', "http://www.ffba.org/badnet", 'FFba - les Interclubs Nationaux et les compétitions fédérales'), 
+		array('Ile de france', "http://www.lifb.org/index.php?option=com_wrapper&view=wrapper&Itemid=222", "Ligue Idf - les Interclubs Régionaux d'ile de France"), 
+		array('Picardie', "http://www.badmintonpicardie.fr/badnet", 'Ligue Picardie - les Interclubs Régionaux de Picardie'), 
+		array('Codep 21', "http://www.badminton21.fr/badnet/interclub.html", "Codep 21 - les Interclubs Départementauxde Côte d'Or"), 
+		array('Codep 35', "http://www.codep35badminton.fr/badnet/www/src/index.php", "Codep 35 - les Interclubs Départementauxde d'Ile et Vilaine"), 
+		array('Codep 44', "http://www.codep44-badminton.fr/badnet", 'Codep 44 - les Interclubs Départementaux de Loire Atlantique'), 
+		array('Codep 72', "http://www.codep72.free.fr/badnet", 'Codep 72 - les Interclubs Départementaux de la Sarthe'), 
+		array('Codep 74', "http://www.badminton-74.org/badnet", 'Codep 74 - les Interclubs Départementaux de Haute Savoie'), 
+		//array('Codep 77', "http://www.codep77badminton.fr/badnet", 'Codep 77 - les Interclubs Départementaux de Seine et Marne'),
+		array('Codep 93', "http://www.badminton93.org/badnet/src/index.php", 'Codep 93 - les Interclubs Départementaux de Seine Saint Denis'),
+		);
+
+		$div->addP('', LOC_TITLE_SITE, 'bn-title-4');
+		$ul = $div->addBalise('ul');
+		$ul->setAttribute('class', 'bn-list-1');
+		$i=1;
+		foreach($links as $link)
+		{
+			$li = $ul->addBalise('li');
+			$lnk = $li->addLink('lnk'.$i++, '', $link[0]);
+			$lnk->setAttribute('href', $link[1]);
+			$lnk->setTooltip($link[2]);
+		}
+
+		$container->addJQReady("displayColright();");
+		$container->display();
+		return false;
+	}
+
+	/**
+	 * Affichage de la trame : partie droite et colonne
+	 * de gauche. Les deux parties eront charge par appel ajax
+	 *
+	 * @return false
+	 */
+	public function displayTrame($aAction)
+	{
+		$body = new Body();
+		$container = $body->addDiv('divInline');
+		$container->addDiv('divLeft', null, $aAction);
+		$container->addDiv('divRight', null, MAIN_COLRIGHT);
+		$container->addBreak();
+		$body->display();
+		return false;
+	}
+
+	/**
+	 * Affichage de la page d'accueil du site
+	 *
+	 * @return false
+	 */
+	public function displayAccueil()
+	{
+		require_once 'Badnetplay/Results/Results.inc';
+		require_once 'Object/Opublic.inc';
+		require_once 'Object/Oevent.inc';
+		$divLeft = new Body();
+//$this->testDb();
+		// Nouvelle badnet
+		$cible = realpath('../Script/News');
+		$files = scandir($cible, 1);
+		$file = reset($files);
+		$fullName = $cible . '/' . $file;
+		$new = file_get_contents($fullName);
+		
+		$d = $divLeft->addDiv('divNew', 'bn-div-criteria');
+		$i = $d->addImage('imgNew', 'ico_news.gif', 'News');
+		$i->setAttribute('align', 'middle');
+		$p = $d->addP('pNew', Bn::date($file, 'd-m-Y') . ' - ' . $new, 'bn-p-info');
+		//$p->setAttribute('style', 'text-align:justify;padding-right:10px;'. $colors[$num]);
+		$dr = $d->addDiv('', 'bn-right-div');
+		$lnk = $dr->addLink('lnkNews', VSOFT_PAGE_BLOG, LOC_LABEL_ALL_NEWS, 'targetBody');
+		$lnk->addIcon();
+		$d->addBreak();
+		
+		// Criteres de recherche
+		$divC = $divLeft->addDiv('divCritere', 'bn-div-criteria bn-div-line bn-div-auto');
+		
+		$form = $divC->addForm('frmSearch', MAIN_SEARCH, 'targetBody');
+		$edit = $form->addEdit('txtSearch', LOC_LABEL_SEARCH, Null, 20);
+		$edit->noMandatory();
+		$form->addHidden('origin', 1); // Ppour recherche tournoi dans poona (1) ou badnet (2)
+		$options = array(1 => LOC_OPTION_TOURNAMENTS_POONA,
+		2 => LOC_OPTION_TOURNAMENTS_BADNET,
+		RESULTS_PAGE_RESULTS => LOC_OPTION_PLAYERS,
+		//BADNETPLAY_INLINE => LOC_OPTION_INLINE,
+		//4 => LOC_OPTION_CIRCUITS
+		);
+		$lst = $form->addSelect('lstChoice', LOC_LABEL_IN);
+		$lst->addOptions($options, reset($options));
+		$l = $lst->addLink('lnkHelp', MAIN_PAGE_HELP, '', 'targetDlg');
+		$l->completeAttribute('class', 'bn-dlg');
+		$l->addImage('imgHelp', 'help.png', 'Help');
+		$l->addMetaData('title', '"' . LOC_TITLE_HELP . '"');
+		$l->addMetaData('width', 550);
+		$l->addMetaData('height', 360);
+		
+		$btn = $form->addButton('btnSearch', LOC_BTN_SEARCH, 'null', 'search');
+		$btn->setAttribute('type', 'submit');
+		$divC->addBreak();
+
+		// Tournois a l'affiche
+		$q = new Bn_query('events');
+		$q->setTables('events, eventsextra');
+		$q->addField('evnt_id');
+		$q->addWhere('evnt_id=evxt_eventid');
+		$q->addWhere('evxt_promoted=' . YES);
+		$q->setOrder('evnt_firstday ASC');
+		$events = $q->getCol();
+		// Si aucun tournoi a l'affiche, en choisir 1 au hasard
+		if ( ! count($events))
+		{
+			$q->setWhere('evnt_season='. Oseason::getCurrent());
+			$q->addWhere('evnt_pbl='. DATA_PUBLIC);
+			$q->addWhere("evnt_lastday >'" . date() . "'");
+			$res = $q->getCol();
+			$num = rand(0, count($res));
+			$events[] = $res[$num];
+		}
+		foreach($events as $eventId)
+		{
+			$oevent = new Oevent($eventId);
+			$oevent->display($divLeft);
+			unset ($oevent);
+		}
+		
+		$q->setTables('events');
+		$q->setFields('evnt_id, evnt_date, evnt_name, evnt_nbvisited, evnt_level, evnt_nature, evnt_dpt, evnt_place, evnt_deadline');
+		
+		//Tournois solibad
+		$div = $divLeft->addDiv('divSolibad');
+		$t = $div->addP('', '', 'bn-title-3');
+		$t->addBalise('span', '',  'Solibad');
+		$ul = $div->addBalise('ul');
+		$ul->setAttribute('class', 'bn-list-1');
+		$q->setWhere('evnt_type=' . OEVENT_TYPE_INDIVIDUAL);
+		$q->addWhere('evnt_nature=' . OEVENT_NATURE_CHAMPIONSHIP);
+		$q->addWhere('evnt_level=' . OEVENT_LEVEL_NAT);
+		$q->addWhere('evnt_pbl=' . OPUBLIC_DATA_PUBLIC);
+		$q->addWhere('evnt_season='.Oseason::getCurrent());
+		$q->setOrder('evnt_firstday');
+		$events = $q->getRows();
+		foreach($events as $event)
+		{
+			$eventId = $event['evnt_id'];
+			$li = $ul->addBalise('li');
+			$lnk = $li->addLink('sol'.$eventId, BNETRES_PAGE_EVENT . '&eventId='. $eventId, $event['evnt_name']);
+			//$lnk->setAttribute('href', $event['evnt_date']);
+			$lnk->setTooltip($event['evnt_date']);
+		}
+		
+		//Tournois individuel
+		$div = $divLeft->addDiv('divIndividual');
+		$t = $div->addP('', '', 'bn-title-3');
+		$t->addBalise('span', '',  LOC_TITLE_INDIV);
+		$div->addP('', 'LOC_TITLE_CHAMPIONSHIP','bn-title-4');
+		$ul = $div->addBalise('ul');
+		$ul->setAttribute('class', 'bn-list-1');
+		$q->setWhere('evnt_type=' . OEVENT_TYPE_INDIVIDUAL);
+		$q->addWhere('evnt_nature=' . OEVENT_NATURE_CHAMPIONSHIP);
+		$q->addWhere('evnt_level=' . OEVENT_LEVEL_NAT);
+		$q->addWhere('evnt_pbl=' . OPUBLIC_DATA_PUBLIC);
+		$q->addWhere('evnt_season='.Oseason::getCurrent());
+		$q->setOrder('evnt_firstday');
+		$events = $q->getRows();
+		foreach($events as $event)
+		{
+			$eventId = $event['evnt_id'];
+			$li = $ul->addBalise('li');
+			$lnk = $li->addLink('lnk'.$eventId, BNETRES_PAGE_EVENT . '&eventId='. $eventId, $event['evnt_name']);
+			//$lnk->setAttribute('href', $event['evnt_date']);
+			$lnk->setTooltip($event['evnt_date']);
+		}
+		
+		$div->addP('', 'Tophée National Jeune (TNJ)','bn-title-4');
+		$ul = $div->addBalise('ul');
+		$ul->setAttribute('class', 'bn-list-1');
+		$q->setWhere('evnt_type=' . OEVENT_TYPE_INDIVIDUAL);
+		$q->addWhere('evnt_nature=' . OEVENT_NATURE_TROPHEE);
+		$q->addWhere('evnt_level=' . OEVENT_LEVEL_NAT);
+		$q->addWhere('evnt_pbl=' . OPUBLIC_DATA_PUBLIC);
+		$q->addWhere('evnt_season='.Oseason::getCurrent());
+		$q->setOrder('evnt_firstday');
+		$events = $q->getRows();
+		foreach($events as $event)
+		{
+			$eventId = $event['evnt_id'];
+			$li = $ul->addBalise('li');
+			$lnk = $li->addLink('lnk'.$eventId, BNETRES_PAGE_EVENT . '&eventId='. $eventId, $event['evnt_name']);
+			//$lnk->setAttribute('href', $event['evnt_date']);
+			$lnk->setTooltip($event['evnt_date']);
+		}
+		
+		$div->addP('', 'LOC_TITLE_TIJ','bn-title-4');
+		$ul = $div->addBalise('ul');
+		$ul->setAttribute('class', 'bn-list-1');
+		$q->setWhere('evnt_type=' . OEVENT_TYPE_INDIVIDUAL);
+		$q->addWhere('evnt_nature=' . OEVENT_NATURE_TROPHEE);
+		$q->addWhere('evnt_level=' . OEVENT_LEVEL_INTER_REG);
+		$q->addWhere('evnt_pbl=' . OPUBLIC_DATA_PUBLIC);
+		$q->setOrder('evnt_firstday');
+		$events = $q->getRows();
+		foreach($events as $event)
+		{
+			$eventId = $event['evnt_id'];
+			$li = $ul->addBalise('li');
+			$lnk = $li->addLink('lnk'.$eventId, BNETRES_PAGE_EVENT . '&eventId='. $eventId, $event['evnt_name']);
+			//$lnk->setAttribute('href', $event['evnt_date']);
+			$lnk->setTooltip($event['evnt_date']);
+		}
+		
+		
+		// Prochains tournois
+		$div2 = $div->addDiv('divNextTournament');
+		$div2->addP('', 'LOC_TITLE_NEXT_TOURNAMENT','bn-title-4');
+		$q->setWhere('evnt_type=' . OEVENT_TYPE_INDIVIDUAL);
+		$q->addWhere("evnt_firstday >='" .date('Y-m-d') . "'");
+		$q->addWhere('evnt_pbl=' . OPUBLIC_DATA_PUBLIC);
+		$q->setOrder('evnt_firstday');
+		$events = $q->getRows();
+		$ul = $div2->addBalise('ul');
+		$ul->setAttribute('class', 'bn-list-1');
+		foreach($events as $event)
+		{
+			$eventId = $event['evnt_id'];
+			$li = $ul->addBalise('li');
+			$lnk = $li->addLink('lnk'.$eventId, BNETRES_PAGE_EVENT . '&eventId='. $event['evnt_id'], $event['evnt_name']);
+			//$lnk->setAttribute('href', $event['evnt_date']);
+			$str = $event['evnt_name'] . ' - ';
+			$str .=  'Date :'. $event['evnt_date'] . "\n";
+			$str .=  'Lieu :'. $event['evnt_place'] . "\n";
+			$str .=  'Inscrition :'. Bn::date($event['evnt_deadline'], 'd-m-Y') . "\n";
+			$lnk->setTooltip($str);
+		}
+
+
+		$div2 = $div->addDiv('divLastResults');
+		$div2->addP('', 'LOC_TITLE_LAST_RESULTS', 'bn-title-4');
+
+		$q->setWhere('evnt_type='.OEVENT_TYPE_INDIVIDUAL);
+		$q->addWhere("evnt_firstday < '" . date('Y-m-d') ."'");
+		$q->addWhere('evnt_pbl=' . OPUBLIC_DATA_PUBLIC);
+		$q->setOrder('evnt_firstday DESC');
+		$q->setLimit(1, 15);
+		$events = $q->getRows();
+
+		// Derniers resultats
+		$ul = $div2->addBalise('ul');
+		$ul->setAttribute('class', 'bn-list-1');
+		foreach($events as $event)
+		{
+			$eventId = $event['evnt_id'];
+			$li = $ul->addBalise('li');
+			$lnk = $li->addLink('lnk'.$eventId, BNETRES_PAGE_EVENT . '&eventId='. $eventId, $event['evnt_name']);
+			$str = $event['evnt_name'] . ' - ';
+			$str .=  'Date :'. $event['evnt_date'] . "\n";
+			$str .=  'Lieu :'. $event['evnt_place'] . "\n";
+			$str .=  'Visite :'. $event['evnt_nbvisited'] . "\n";
+			$lnk->setTooltip($str);
+		}
+
+		//Tournoi par equipes
+		$div = $divLeft->addDiv('divInterclub');
+		$t = $div->addP('', '', 'bn-title-3');
+		$t->addBalise('span', '',  LOC_TITLE_TEAM);
+
+		$q->setWhere('evnt_type='. OEVENT_TYPE_TEAM);
+		$q->addWhere('evnt_season='.Oseason::getCurrent());
+		$q->setLimit(1, 150);
+		$q->setorder('evnt_dpt');
+		$events = $q->getRows();
+
+		$div->addP('', 'LOC_TITLE_INTERCODEP','bn-title-4');
+		$ulc = $div->addBalise('ul');
+		$ulc->setAttribute('class', 'bn-list-1');
+		
+		$div->addP('', 'LOC_TITLE_NAT','bn-title-4');
+		$uln = $div->addBalise('ul');
+		$uln->setAttribute('class', 'bn-list-1');
+
+		$div->addP('', 'LOC_TITLE_REG','bn-title-4');
+		$ulr = $div->addBalise('ul');
+		$ulr->setAttribute('class', 'bn-list-1');
+
+		$div->addP('', 'LOC_TITLE_DEPT','bn-title-4');
+		$uld = $div->addBalise('ul');
+		$uld->setAttribute('class', 'bn-list-1');
+		foreach($events as $event)
+		{
+			$eventId = $event['evnt_id'];
+			if ($event['evnt_nature'] == OEVENT_NATURE_INTERCODEP)
+			{
+				$li = $ulc->addBalise('li', 'eventsLinks');
+				$lnk = $li->addLink('lnk'.$eventId, BNETRES_PAGE_EVENT . '&eventId='. $eventId, $event['evnt_name']);
+			}
+			elseif ($event['evnt_level'] == OEVENT_LEVEL_DEP)
+			{
+				$li = $uld->addBalise('li', 'eventsLinks');
+				$lnk = $li->addLink('lnk'.$eventId, BNETRES_PAGE_EVENT . '&eventId='. $eventId, '[' . $event['evnt_dpt']. '] ' . $event['evnt_name']);
+			}
+			else if ($event['evnt_level'] == OEVENT_LEVEL_REG)
+			{
+				$li = $ulr->addBalise('li', 'eventsLinks');
+				$lnk = $li->addLink('lnk'.$eventId, BNETRES_PAGE_EVENT . '&eventId='. $eventId, $event['evnt_name']);
+			}
+			else
+			{
+				$li = $uln->addBalise('li', 'eventsLinks');
+				$lnk = $li->addLink('lnk'.$eventId, BNETRES_PAGE_EVENT . '&eventId='. $eventId, $event['evnt_name']);
+			}
+			$str = $event['evnt_name'] . ' - ';
+			$str .=  'Visite :'. $event['evnt_nbvisited'] . "\n";
+			$lnk->setTooltip($str);
+		}
+		$divLeft->addBreak();
+		
+		$divLeft->addJQReady('displayAccueil();');
+		$divLeft->display(MENU_VISITOR, 1);
+		return false;
+	}
+
+	public function testDb()
+	{
+	   Bn::profile();
+		$q = new Bn_query('PERSONNE, PERSONNE_SEXE', '_poona',  'poona_permanent');
+		$q->addField('PER_ID',        'poonaid');
+		$q->addField('PER_NOM',       'familyname');
+		$q->addField('PER_PRENOM',    'firstname');
+		$q->addField('PER_LICENCE',   'license');
+		$q->addField('PER_NAISSANCE', 'born');
+		$q->addField('PER_PES_ID',    'gender');
+		$q->addWhere('PER_LICENCE=12118');
+		$member = $q->getRow();
+	   Bn::profile(1);
+		$member = $q->getRow();
+	   Bn::profile(2);
+		$member = $q->getRow();
+	   Bn::profile(3);
+	   
+		$q = new Bn_query('PERSONNE, PERSONNE_SEXE', '_poona',  'poona_permanent');
+		$q->addField('PER_ID',        'poonaid');
+		$q->addField('PER_NOM',       'familyname');
+		$q->addField('PER_PRENOM',    'firstname');
+		$q->addField('PER_LICENCE',   'license');
+		$q->addField('PER_NAISSANCE', 'born');
+		$q->addField('PER_PES_ID',    'gender');
+		$q->addWhere('PER_LICENCE=12118');
+		$member = $q->getRow();
+	   Bn::profile(11);
+		$member = $q->getRow();
+	   Bn::profile(12);
+		$member = $q->getRow();
+	   Bn::profile(13);
+	   
+		$q = new Bn_query('PERSONNE, PERSONNE_SEXE', '_poona',  'poona_permanent');
+		$q->addField('PER_ID',        'poonaid');
+		$q->addField('PER_NOM',       'familyname');
+		$q->addField('PER_PRENOM',    'firstname');
+		$q->addField('PER_LICENCE',   'license');
+		$q->addField('PER_NAISSANCE', 'born');
+		$q->addField('PER_PES_ID',    'gender');
+		$q->addWhere('PER_LICENCE=12118');
+		$member = $q->getRow();
+	   Bn::profile(21);
+		$member = $q->getRow();
+	   Bn::profile(22);
+		$member = $q->getRow();
+	   Bn::profile(23);
+	   
+	   Bn_Db::trace();
+	}
+}
+?>

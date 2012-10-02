@@ -1,0 +1,88 @@
+#infos{
+   float:left;
+   margin-bottom: 5px;
+}
+#menuEvents  li{
+   float: left;
+}
+#menuNews  li{
+  padding-top: 0;
+  float: left;
+}
+#menuAutos  li{
+  padding-top:0;
+  float: left;
+}
+
+#blkType,#blkLevel,#blkCatage {
+  margin-top: 5px;
+  display:block;
+  text-align:center;
+  border: 1px solid blue;
+}
+
+#blkEvent span {
+  width: 15em;
+}
+
+.blkModel{
+ clear:both;
+ margin-top:5px;
+ padding-bottom:10px;
+ border: 1px solid #888;
+ background : #eee;
+}
+.titre{
+   margin-bottom : 5px;
+   padding : 2px;
+   font-family: Tahoma, Arial, serif;
+   font-weight: bold;
+   font-size: 12px;
+   border-bottom: 2px solid #000;
+}
+.blkInfo{
+ float:left;
+}
+
+.classPostIt{
+ float:left;
+ width : 150px;
+ background: yellow;
+ border : 1px solid #000;
+ margin-right:2px;
+ margin-top:2px;
+}
+.titrePost{
+ border-bottom : 1px solid #000;
+}
+.closePost{
+ padding:0 2px 0 2px;
+ border-left : 1px solid #000;
+ float:right;
+}
+.editPost{
+ padding:0 2px 0 2px;
+ border-right : 1px solid #000;
+ float:left;
+}
+
+/*-----------------------------*/
+/*  Liste deroulante de choix  */
+/*-----------------------------*/
+#selectList{ 
+  text-align:center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#selectList option{ 
+  font-size: 1em;
+  text-align:left;
+}
+
+#selectList span{ 
+  display:none;
+}
+
+
+#blkSendRight, #blkBtn{display:block;clear:both;}

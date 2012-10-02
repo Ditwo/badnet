@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="begin">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="allowaddplayer">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="born">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="catage">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="court">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="delayaddplayer">
+    <xs:complexType mixed="true" />
+  </xs:element>
+  
+  <xs:element name="discipline">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="division">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="end">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="eventdate">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="eventname">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="eventplace">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="eventstep">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="famname">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="firstname">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="gender">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="generate">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="generator">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="group">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="ispresent">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="level">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="license">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="match">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="order" />
+        <xs:element ref="begin" />
+        <xs:element ref="end" />
+        <xs:element ref="score" />
+        <xs:element ref="court" />
+        <xs:element ref="resulth" />
+        <xs:element ref="resultv" />
+        <xs:element ref="status" />
+        <xs:element ref="playh1numid" />
+        <xs:element ref="playh2numid" />
+        <xs:element ref="playv1numid" />
+        <xs:element ref="playv2numid" />
+      </xs:sequence>
+      <xs:attribute name="discipline" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="110" />
+            <xs:enumeration value="111" />
+            <xs:enumeration value="112" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="numid" type="xs:NMTOKEN" use="required" />
+      <xs:attribute name="disci" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+            <xs:enumeration value="4" />
+            <xs:enumeration value="5" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="rank" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+            <xs:enumeration value="4" />
+            <xs:enumeration value="5" />
+            <xs:enumeration value="6" />
+            <xs:enumeration value="7" />
+            <xs:enumeration value="8" />
+            <xs:enumeration value="9" />
+            <xs:enumeration value="10" />
+            <xs:enumeration value="11" />
+            <xs:enumeration value="12" />
+            <xs:enumeration value="13" />
+            <xs:enumeration value="14" />
+            <xs:enumeration value="15" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mute">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="nbcourt">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="numcatage">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="numid">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="order">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="player">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="famname" />
+        <xs:element ref="firstname" />
+        <xs:element ref="gender" />
+        <xs:element ref="license" />
+        <xs:element ref="catage" />
+        <xs:element ref="numcatage" />
+        <xs:element ref="surclasse" />
+        <xs:element ref="mute" />
+        <xs:element ref="stranger" />
+        <xs:element ref="born" />
+        <xs:element ref="rest" />
+        <xs:element ref="ispresent" />
+        <xs:element ref="court" />
+        <xs:element ref="rank" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="numid" type="xs:NMTOKEN" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="playh1numid">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="playh2numid">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="playv1numid">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="playv2numid">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="pointh">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="points">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="pointv">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="range">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="rank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="discipline" />
+        <xs:element ref="level" />
+        <xs:element ref="points" />
+        <xs:element ref="order" />
+        <xs:element ref="range" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rankingsystem">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="rest">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="resulth">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="resultv">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="schedule">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="score">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="scoringsystem">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="sporthall">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="status">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="step" type="xs:string" />
+
+  <xs:element name="stranger">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="surclasse">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="team">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="teamname" />
+        <xs:element ref="teamstamp" />
+        <xs:element ref="teampos" />
+        <xs:element ref="player" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="numid" type="xs:NMTOKEN" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="teamhnumid">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="teamname">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="teampos">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="teamstamp">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="teamvnumid">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="tie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="division" />
+        <xs:element ref="group" />
+        <xs:element ref="teamhnumid" />
+        <xs:element ref="step" />
+        <xs:element ref="teamvnumid" />
+        <xs:element ref="schedule" />
+        <xs:element ref="sporthall" />
+        <xs:element ref="tiepos" />
+        <xs:element ref="pointh" />
+        <xs:element ref="pointv" />
+        <xs:element ref="match" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="numid" type="xs:NMTOKEN" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="tiepos">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+  <xs:element name="ties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="version" />
+        <xs:element ref="generate" />
+        <xs:element ref="generator" />
+        <xs:element ref="numid" />
+        <xs:element ref="eventname" />
+        <xs:element ref="eventdate" />
+        <xs:element ref="eventplace" />
+        <xs:element ref="eventstep" />
+        <xs:element ref="rest" />
+        <xs:element ref="nbcourt" />
+        <xs:element ref="scoringsystem" />
+        <xs:element ref="rankingsystem" />
+        <xs:element ref="allowaddplayer" />
+        <xs:element ref="delayaddplayer" />
+        <xs:element ref="team" maxOccurs="unbounded" />
+        <xs:element ref="tie" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="version">
+    <xs:complexType mixed="true" />
+  </xs:element>
+
+</xs:schema>

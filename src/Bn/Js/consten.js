@@ -1,0 +1,12 @@
+var c_s_ct1="Hour format is invalid. Correct format is hh:mm:ss.";
+var c_s_ct2="Hours must be between 0 and 23.";
+var c_s_ct3="Minutes must be between 0 and 59.";
+var c_s_ct5="Seconds must be between 0 and 59.";
+var c_s_cd1="Date format is invalid. Correct format is dd/mm/yyyy."
+var c_s_cd2="Day must be between 1 and 31."
+var c_s_cd3="Month must be between 1 and 12."
+var c_s_cd4="This month haven't 31 days."
+var c_s_cd5="February haven't as much days for this year."
+var c_s_cn1="Number is invalid."
+var c_s_cn2="Number must be smaller than "
+var c_s_cn3="Number must be taller than "

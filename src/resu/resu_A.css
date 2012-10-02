@@ -1,0 +1,38 @@
+#playerName { 
+  text-align : center;
+  font-size: 2em;
+  margin-bottom:3px;
+}
+#playerName span { 
+  display:none;
+}
+
+#playerList { 
+  float:left;
+}
+
+#k_playerList span { 
+  display:none;
+}
+
+#photo {
+ float:left;
+}
+
+.blkInfo {
+ float:left;
+ margin-left:20px;
+ margin-bottom: 10px;
+ border : 1px solid #ccc; 
+}
+#infos span{
+ width:10em;
+}
+
+#playerEntrie span{
+ width:20em;
+}
+
+#blkCivil span{
+ width:23em;
+}

@@ -1,0 +1,24 @@
+/*****************************************************************************
+ !   $Id$
+ ******************************************************************************/
+.Distrib #divConnect {margin:15px 0;}
+.Distrib #divConnect .bn-label {width:6.5em; text-align:right;}
+.Distrib #divConnect .bn-edit {margin:4px 0;}
+.Distrib #divConnect input {width:70px}
+.Distrib #divConnect .blkBtnLogin{text-align:center;}
+.Distrib #divConnect .divLog p {text-align:center; margin:10px;}
+.Distrib #divConnect .divLinks p {text-align:center; margin:3px;}
+.Distrib #divConnect a{font-size:0.9em;}
+.Distrib #divConnect #pDirect{font-weight:bold; color:#f28f00;}
+
+
+.Distrib #divIndividual {float:left; width:295px;}
+.Distrib #divInterclub {float:right; width:295px;}
+.Distrib #divCalendar {font-size:10px;}
+
+/*-- Colonne de Gauche --*/
+#divLeft{width:605px; margin-right:20px; float:left; }
+
+/*-- Colonne de droite --*/
+#divRight{width:165px; float:right;border-left:1px solid #76777c;padding-left:10px;text-align:left;}
+	

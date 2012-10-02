@@ -1,0 +1,28 @@
+ .jqifade{
+      background-color: #ffffff;
+}
+div.jqi{
+      position: absolute;
+      background-color: #c0cEa6;
+      padding: 10px;
+      max-width: 800px;
+      min-width: 300px;
+}
+div.jqi .jqicontainer{
+      background-color: #e0eEc6;
+      padding: 5px;
+      color: #ffffff;
+      font-weight: bold;
+}
+div.jqi .jqimessage{
+      background-color: #c0cEa6;
+      padding: 15px;
+}
+div.jqi .jqibuttons{
+      text-align: center;
+      padding: 5px 0 0 0;
+}
+div.jqi button{
+      padding: 3px 10px 3px 10px;
+      margin: 0 10px;
+}

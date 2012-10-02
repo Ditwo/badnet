@@ -1,0 +1,83 @@
+/******************************
+*  Forms export federal
+/*******************************/
+
+/*-----------------
+*  Titre
+*-----------------*/
+#tExportFede { 
+  text-align : center;
+  font-size: 2em;
+  background : white;
+  border: 2px solid green;
+  margin-bottom:8px;
+}
+
+/*---------------------------
+*  Informations sur le mail
+*---------------------------*/
+#blkMail{
+  text-align : center;
+  display:inline;
+  border : 2px solid #000;
+  margin-top : 0px;
+  margin-bottom : 20px;
+}
+#blkMail label{
+  width : 8em;
+}
+
+#blkBtn{
+  display:block;
+  text-align : center;
+ }
+
+
+/*---------------------------
+*  Choix des dates
+*---------------------------*/
+#blkInfo {
+  border : 2px solid #000;
+}
+
+#blkInfo span{
+  text-align : right;
+  width:7em;
+  display:inline;
+  border : none;
+}
+
+#blkbeginDate {
+  padding-right:0;	
+}
+
+#blkendDate {
+  padding-left:0;	
+}
+
+#blkendDate label{
+  margin-left : 0;
+  text-align : center;
+  width: 4em;
+}
+
+#blkexportAll{
+display:block;
+}
+
+#listTies{
+  display:inline;
+//  width :auto;
+  border : none;
+}
+
+#blklistTies{
+  text-align:center;
+  //width :auto;
+  border : none;
+}
+
+
+
+
+

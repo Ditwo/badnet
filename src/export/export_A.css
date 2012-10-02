@@ -1,0 +1,13 @@
+#k_eventList span{
+  display:none;
+}
+
+#purge {
+float:left;
+}
+
+#fImport span{
+text-align:left;
+width : 25em;
+border:none;
+}

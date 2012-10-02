@@ -1,0 +1,5 @@
+Ce dossier contient le fichier cnx.dat généré automatiquement par BadNet 
+lors de son installation. Ne modifier pas manuellement ce fichier ou 
+BadNet risque de ne plus fonctionner correctement.
+Si vous le supprimer, BadNet vous redemandera les informations nécessaires 
+pour se connecter au serveur de données et à la base de données.

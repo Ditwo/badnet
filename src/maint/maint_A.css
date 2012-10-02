@@ -1,0 +1,14 @@
+#fMergeAsso, #fMergeMember {
+  float:left;
+}
+#fSrcAsso span, #fSrcMember span{
+  display:none;
+}
+#k_srcMemberList span{
+  display:inline;
+}
+
+
+
+
+

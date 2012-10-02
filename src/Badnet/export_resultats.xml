@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resultats version="0.1">
+
+	<competition type="individuelle" numero_autorisation="11111">
+
+		<juge_arbitre type="principal | adjoint" licence="" />
+		<tableau nom="SIMPLE HOMME B  | INTERCLUBS REGIONAL 1">
+			<tour type="poule">
+				<nom>poule A</nom>
+				<match>... --Competitions individuelles</match>
+				<rencontre>
+					-- Competitions par equipes
+					<equipe>
+						<nom />
+						<club />
+					</equipe>
+					<equipe>...</equipe>
+					<score />
+
+					<match discipline="SH | SD  | DH | DD | MX"
+						serie="Serie A"
+						categorie="P | B | M | C | J | S | V1 | V2 | V3 | V4 | V5">
+
+						<arbitrage
+							type="officiel |avec juge de service | auto-arbitrage">
+							<arbitre />
+							<juge_service />
+						</arbitrage>
+						<date debut="12h00" duree="26">06-06-2009</date>
+						<position />
+						-- est ce n�cessaire ? ou implicite
+						<paire gagnant="oui/non">
+							<position />
+							-- implicite ou pas ?
+							<tds />
+							<joueur licence="1" nom="" prenom="">
+								<etranger>
+									<classement />
+									<club />
+									<pays />
+								</etranger>
+							</joueur>
+							<joueur>...</joueur>
+						</paire>
+						<paire>...</paire>
+						<score>
+							<set abandon="oui/non" />
+							<set abandon="oui/non" />
+							<set abandon="oui/non" />
+						</score>
+					</match>
+					<match>...</match>
+				</rencontre>
+			</tour>
+
+			<tour>...</tour>
+
+			<tour type="principale | consolante | qualification | ronde | poule">
+				<nom name='Finale'>
+					<match>-- individuel ...</match>
+					<rencontre>
+						-- par equipe
+						<match>...</match>
+					</rencontre>
+				</nom>
+				<nom name="Demi">
+					<match>-- individuel ...</match>
+					<rencontre>
+						-- par equipe
+						<match>...</match>
+					</rencontre>
+				</nom>
+			</tour>
+			
+			<tour>...</tour>
+		</tableau>
+	</competition>
+</resultats>

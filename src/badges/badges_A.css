@@ -1,0 +1,26 @@
+#menuZone{
+clear:none;
+float:left;
+}
+#menuZone li{
+display : block;
+width : 130px;
+}
+
+#k_listNok, #k_listOk{
+ float:left;
+ margin-right:10px;
+}
+#k_listNok .kLabel, #k_listOk .kLabel{
+ float:none;
+}
+#k_listNok span, #k_listOk span{
+ text-align:center;
+ border:none;
+}
+
+#blkBtn{
+	clear:both;
+	display:block;
+	text-align:center;
+}

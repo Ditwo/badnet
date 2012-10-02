@@ -1,0 +1,35 @@
+/* Menu */
+.badnetMenu a{
+	background-image: url("Img/ico_box_vide_off.jpg");
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+
+.badnetMenu .active a, .badnetMenu .active a:hover{
+	background-image: url("Img/ico_box_vide_select.jpg");
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+
+.badnetMenu a:hover{
+	background-image: url("Img/ico_box_vide_roll.jpg");
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+.badnetMenu .menuImg, #lstMenuLocale .menuImg {
+	width:40px;
+	height:40px;
+	background-repeat: no-repeat;
+	}
+
+/*--- Menu team IC ---*/
+#lstMenuTeam1 {background-image: url("Img/ico_admin_off.jpg");}
+a:hover #lstMenuTeam1 {background-image: url("Img/ico_admin_roll.jpg");}
+.active #lstMenuTeam1, .active a:hover #lstMenuTeam1 {background-image: url("Img/ico_admin_select.jpg");}
+
+#lstMenuTeam2 {background-image: url("Img/ico_import-export_off.jpg");}
+a:hover #lstMenuTeam2 {background-image: url("Img/ico_import-export_roll.jpg");}
+.active #lstMenuTeam2, .active a:hover #lstMenuTeam2 {background-image: url("Img/ico_import-export_select.jpg");}
+
+
+

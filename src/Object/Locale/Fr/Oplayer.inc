@@ -1,0 +1,44 @@
+<?php 
+require_once 'Object/Oplayer.inc'; 
+define('LABEL_301','Poussin'); 
+define('LABEL_302','Benjamin'); 
+define('LABEL_303','Minime'); 
+define('LABEL_304','Cadet'); 
+define('LABEL_305','Junior'); 
+define('LABEL_306','Sénior'); 
+define('LABEL_307','+35'); 
+define('LABEL_308','+40'); 
+define('LABEL_309','+45'); 
+define('SMA_LABEL_301','Pou'); 
+define('SMA_LABEL_302','Ben'); 
+define('SMA_LABEL_303','Min'); 
+define('SMA_LABEL_304','Cad'); 
+define('SMA_LABEL_305','Jun'); 
+define('SMA_LABEL_306','Sén'); 
+define('SMA_LABEL_307','+35'); 
+define('SMA_LABEL_308','+40'); 
+define('SMA_LABEL_309','+45'); 
+
+define('LABEL_1','Simple Homme'); 
+define('LABEL_2','Simple Dame'); 
+define('LABEL_3','Double Homme'); 
+define('LABEL_4','Double Dame'); 
+define('LABEL_5','Mixte'); 
+define('SMA_LABEL_1','SH'); 
+define('SMA_LABEL_2','SD'); 
+define('SMA_LABEL_3','DH'); 
+define('SMA_LABEL_4','DD'); 
+define('SMA_LABEL_5','MX'); 
+define('LABEL_350','Aucun'); 
+define('LABEL_351','Simple'); 
+define('LABEL_352','Double'); 
+define('LABEL_353','Vétéran autorisé'); 
+define('LABEL_354','Exceptionnel'); 
+define('LABEL_355','Poussin'); 
+define('SMA_LABEL_350',''); 
+define('SMA_LABEL_351','1S'); 
+define('SMA_LABEL_352','2S'); 
+define('SMA_LABEL_353','V'); 
+define('SMA_LABEL_354','SE'); 
+define('SMA_LABEL_355','SP'); 
+?>

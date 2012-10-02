@@ -1,0 +1,35 @@
+<?php 
+define('LOC_P_HELP_TOURNAMENT_POONA','Libellé ES'); 
+define('LOC_P_HELP_TOURNAMENT_BADNET','Libellé ES'); 
+define('LOC_P_HELP_PLAYER','Libellé ES'); 
+define('LOC_TITLE_HELP','Libellé ES'); 
+define('LOC_TITLE_INTERCLUB','Libellé ES'); 
+define('LOC_TITLE_NEXT_TOURNAMENT','Libellé ES'); 
+define('LOC_TITLE_LAST_RESULTS','Libellé ES'); 
+define('LOC_OPTION_INLINE','Libellé ES'); 
+define('LOC_OPTION_CIRCUITS','Libellé ES'); 
+define('LOC_OPTION_PLAYERS','Libellé ES'); 
+define('LOC_OPTION_TOURNAMENTS_BADNET','Libellé ES'); 
+define('LOC_OPTION_TOURNAMENTS_POONA','Libellé ES'); 
+define('LOC_LABEL_IN','Libellé ES'); 
+define('LOC_LABEL_ALL_NEWS','All news ...'); 
+define('LOC_LABEL_SEARCH','Libellé ES'); 
+define('LOC_TITLE_TUTOS','Libellé ES'); 
+define('LOC_TITLE_DOCUMENTATION','Libellé ES'); 
+define('LOC_ITEM_INSTALLATION','Libellé ES'); 
+define('LOC_ITEM_EVOLUTION','Libellé ES'); 
+define('LOC_ITEM_FORUM','Libellé ES'); 
+define('LOC_ITEM_DOWNLOAD','Libellé ES'); 
+define('LOC_TITLE_CHAMPIONSHIP','Libellé ES'); 
+define('LOC_TITLE_TIJ','Libellé ES'); 
+define('LOC_TITLE_TEJ','Libellé ES'); 
+define('LOC_TITLE_SITE','Libellé ES'); 
+define('LOC_TITLE_NAT','Libellé ES'); 
+define('LOC_TITLE_REG','Libellé ES'); 
+define('LOC_TITLE_DEPT','Libellé ES'); 
+define('LOC_TITLE_SOFT','Libellé ES'); 
+define('LOC_TITLE_PLAYER','Libellé ES'); 
+define('LOC_TITLE_ASSOC','Libellé ES'); 
+define('LOC_TITLE_INDIV','Libellé ES'); 
+define('LOC_TITLE_INTERCODEP','Libellé ES'); 
+?>

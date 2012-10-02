@@ -1,0 +1,13 @@
+<?php 
+define('LABEL_A','Administrator'); 
+define('LABEL_M','Manager'); 
+define('LABEL_U','User'); 
+define('LABEL_P','Player'); 
+define('LABEL_C','Club'); 
+define('LABEL_V','Visitor'); 
+define('LABEL_G','Guest'); 
+define('LABEL_F','Friend'); 
+define('LABEL_S','Assistant'); 
+define('LABEL_R','Referee'); 
+define('LABEL_T','Captain'); 
+?>

@@ -1,0 +1,47 @@
+.kImg{
+display:none;
+}
+
+.kRow{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000;/*888;*/
+  padding: 0;
+  margin:0;
+}
+
+.kRowBreak{
+  font-size: medium;
+  font-weight: bold;
+  border: none;
+}
+
+th{
+  padding: 3px;
+  border: 1px solid #000;
+}
+
+td{
+  padding: 3px;
+  border: 1px solid #000;
+}
+
+.kActHead {   
+  display: none;
+}
+.kActCell0 {   
+  display: none;
+}
+
+.kActCell1 {   
+  display: none;
+}
+
+.kIconClass {   
+  display: none;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}

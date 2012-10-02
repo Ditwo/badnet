@@ -1,0 +1,12 @@
+ALTER TABLE `bdnet_events` CHANGE `evnt_place` `evnt_place` VARCHAR( 50 );
+ALTER TABLE `bdnet_rounds` ADD `rund_tieEqualPlus` TINYINT NOT NULL DEFAULT '0' AFTER `rund_tieWin`; 
+ALTER TABLE `bdnet_rounds` ADD `rund_tieEqualMinus` TINYINT NOT NULL DEFAULT '0' AFTER `rund_tieEqual`; 
+ALTER TABLE `bdnet_rounds` ADD `rund_tiematchnum` TINYINT NOT NULL DEFAULT '1' COMMENT 'Numero du match decisif' AFTER `rund_tieWO`;
+ALTER TABLE `bdnet_rounds` ADD `rund_tiematchdecisif` TINYINT NOT NULL DEFAULT '1' COMMENT 'Match decisif pour le classement d''une rencontre (SH, SD, DH, DD ou Mx)' AFTER `rund_tieWO`;
+ALTER TABLE `bdnet_rounds` ADD `rund_tieranktype` SMALLINT NOT NULL DEFAULT '142' COMMENT 'Type de classement d''une rencontre' AFTER `rund_tieWO`;
+--ALTER TABLE `asso_creations` ADD `crea_type` CHAR( 1 ) NOT NULL DEFAULT 'U';
+ALTER TABLE `bdnet_matchs` ADD `mtch_luckylooser` SMALLINT NOT NULL DEFAULT '161';
+--ALTER TABLE `asso_adherents` CHANGE `adhe_mobile` `adhe_mobile` VARCHAR( 20 ) NOT NULL DEFAULT '';
+ALTER TABLE `bdnet_events` CHANGE `evnt_numauto` `evnt_numauto` VARCHAR( 150 ) NULL DEFAULT NULL;
+ALTER TABLE `bdnet_i2p` CHANGE `i2p_cppp` `i2p_cppp` DOUBLE NOT NULL DEFAULT '0';
+ALTER TABLE `bdnet_ties` ADD `tie_nobefore` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00';

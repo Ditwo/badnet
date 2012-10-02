@@ -1,0 +1,32 @@
+#roundList{ 
+  text-align:center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#roundList option{ 
+  font-size: 1em;
+  text-align:left;
+}
+
+#rundState { 
+ display:inline;
+float:left;
+}
+
+#formRoundDef { 
+ display:none;
+}
+
+#formPlus input, #formPlus div { 
+ display:inline;
+}
+
+#menuplateau { 
+ float:left;
+ text-align:left;
+}
+#menuplateau .select{ 
+ font-weight:bold;
+ text-align:left;
+}

@@ -1,0 +1,280 @@
+/*---- Module Badnet::event ----*/
+.Div #divfrmAddGroup #divdivision .bn-label  {width:9em;}
+.Div #divfrmAddGroup #divroundname .bn-label  {width:9em;}
+.Div #divfrmAddGroup #divstamp .bn-label  {width:6em;}
+.Div #divfrmAddGroup #divstamp input  {width:5em;}
+.Div #divfrmAddGroup #divdivstamp .bn-label  {width:6em;}
+.Div #divfrmAddGroup #divdivstamp input  {width:5em;}
+.Div #divfrmAddGroup #divdrawid select  {width:8em;}
+
+.Div #divfrmGroupdef #divname .bn-label  {width:9em;}
+.Div #divfrmGroupdef #divname input  {width:20em;}
+.Div #divfrmGroupdef #divname select  {width:20em;}
+.Div #divfrmGroupdef #divstamp .bn-label  {width:9em;}
+.Div #divfrmGroupdef #divstamp input  {width:5em;}
+.Div #divfrmGroupdef .divLol {margin-left: 10px;border-left:Solid 1px #666;}
+
+.Div #divfrmMatchsdef .bn-label {width:15em;}
+.Div #divfrmMatchsdef .bn-edit input {width:3em;}
+
+.Div #divfrmtiesdef .bn-edit  input {width:3em;}
+.Div #divfrmtiesdef #divtiespoints .bn-label  {width:15em;}
+.Div #divfrmtiesdef #divtiesrank .bn-label  {width:12em;}
+
+.Event #divfrmNewEvent .bn-label {width:9em;}
+.Event #divfrmNewEvent .bn-edit input{width:27em;}
+.Event #divfrmNewEvent .bn-edit select{width:8em;}
+.Event #divType {margin-left:9em;}
+.Event .div-info {width:375px;}
+
+/* page mise a jour tournoi */
+/*
+.Events #divrdoConvocMatch {float:left;}
+.Events #txtLieuConvoc{width:50em;}
+.Events #txtTextConvoc{height:14em;width:50em;}
+.Events #divGene, .Events #divGene2, .Events #divOption{float:left;}
+.Events #divGene, .Events #divOption{margin-right:15px;}
+.Events #divGene input{width:4em;}
+.Events #divGene .bn-label{width:7em;}
+.Events #divGene2 .bn-label, .Events #divConvoc .bn-label{width:10em;}
+.Events #divGene2 input, .Events #divGene2 select{width:18em;}
+*/
+
+/*---- Module Badnet::preferences ----*/
+.Preference #divfrmAdmin .bn-edit input{width:35em;}
+.Preference #divfrmAdmin .bn-edit select{width:35em;}
+.Preference #divfrmAdmin .bn-label {width:9em;}
+.Preference #divdelaycaptain .bn-label{width:auto; text-align:left;}
+.Preference #divfeesteam .bn-label{width:auto; text-align:left;}
+.Preference #divdelayaddplayer {float:none; display:inline;}
+.Preference #delaycaptain {width:3em;}
+.Preference #feesteam {width:3em;}
+.Preference #frmSportive select {width:8em;}
+
+/*---- Module Visiteur::Page news ----*/
+.divNew {vertical-align:top;}
+.divNew .newDate{ float:left;margin:0 20px 10px 0; width:85px;height:45px;}
+.new1{font-size: 1.3em;}
+.new2{font-size: 1.2em;}
+.new3{font-size: 1.1em;}
+.divNew .newContent{loat:left;text-align:justify;}
+
+/*---- Module Badnet::Captain ----*/
+.Captain #divResults{width:150px; margin-right:0;}
+
+.Captain #divGender #search{width:8em;}
+.Captain #divGender #asso{width:20em;}
+.Captain #divCivil .bn-radio {float:left;}
+.Captain #divCivil #divfamname {clear:both;}
+.Captain #divSport #catage {float:left; margin-right:10px;}
+.Captain #divSport #levels {float:left; margin-right:10px;}
+.Captain #divSport #divranks label{width:auto;}
+.Captain #divSport #divranks input{width:6em;}
+.Captain #divSport #leveld {float:left; margin-right:10px;}
+.Captain #divSport #divrankd label{width:auto;}
+.Captain #divSport #divrankd input{width:6em;}
+.Captain #divSport #levelm {float:left; margin-right:10px;}
+.Captain #divSport #divrankm label{width:auto;}
+.Captain #divSport #divrankm input{width:6em;}
+
+/*---- Module Badnet::Captain Ajout de joueur----*/
+.Captain #divfrmPlayer .bn-edit input{width:11em;}
+.Captain #divfrmPlayer .bn-label{width:8em;}
+.Captain #divfrmPlayer #player {width:32em;background:white;}
+.Captain #divfrmPlayer #email {width:32em;}
+.Captain #lgd {float:right; margin:0;}
+.Captain #lgd li{float:none;}
+
+/* consultation d'un match */
+.Captain .dMatch {clear:both; border-bottom: solid 1px;}
+.Captain .dMatch .dmDisci{float:left;width:80px;font-weight:bold;font-size:1.4em;}
+.Captain .dMatch .dmDisci p{margin: 5px 0px;}
+.Captain .dMatch .dmResult{float:left;width:40px;}
+.Captain .dMatch .dmPlayer{float:left;}
+.Captain .dMatch .dmPlayer p {width:270px; text-align:left;}
+.Captain .dMatch .dmScore{float:left;width:80px;}
+
+/* saisie d'un match */
+.Captain .dMatch .bn-label {display:none;}
+.Captain .dMatch .dmPlayer select{width:300px;}
+.Captain #msg {width:525px; height:105px;}
+
+/*---- Module Badnet::Import ----*/
+#divfile .bn-label{width:auto;}
+#divValidFile{padding-right:0;}
+
+/*---- Module Pinline ----*/
+.Pinline .divDisci{float:left;width:250px;margin-left:20px;}
+.Pinline .divDisci .bn-label{width:8em;}
+.Pinline #divSingle{margin-left:0px;}
+.Pinline #divtxtComment{clear:both;}
+
+/* Modification d'une inscription */
+#divfrmRegi #divSingleF {float:left; margin-right:10px;}
+#divfrmRegi #divDoubleF {float:left; margin-right:10px;}
+#divfrmRegi #divMixedF  {float:left;}
+
+#divfrmRegi #divSingleF .bn-label {width:6em;}
+#divfrmRegi #divDoubleF .bn-label {width:5em;}
+#divfrmRegi #divMixedF  .bn-label {width:5em;}
+
+#divfrmRegi #divSingleF textarea {width:16em; height:8em;}
+#divfrmRegi #txtPartnerfamd {width:14em;}
+#divfrmRegi #txtPartnerfird {width:14em;}
+#divfrmRegi #txtPartnerfamm {width:14em;}
+#divfrmRegi #txtPartnerfirm {width:14em;}
+#divfrmRegi #lstPartnerd {width:13em;}
+#divfrmRegi #lstPartnerm {width:13em;}
+
+#divfrmSend #txtMsg {width:36em; height:15em;}
+#divfrmSend .bn-label {width:auto;}
+
+/*---- Module Cinline ----*/
+.Cinline .blkData{float:left;}
+.Cinline #divGender{width:100px; margin-right:20px;}
+.Cinline #divCatage{width:340px; margin-right:20px;}
+.Cinline #divCatage .catage{float:left; margin-right:20px;}
+.Cinline #divInstance{width:290px;}
+
+/* nouveau joueur */
+.Cinline #dGender .bn-radio {float:left; margin-right:10px;}
+.Cinline #divCivil #divfamname {clear:both;}
+.Cinline #divcatage #catage {float:left; margin-right:10px;}
+.Cinline #divlevels select {float:left; margin-right:10px;}
+.Cinline #divranks .bn-label {width:auto;}
+.Cinline #divranks input {width:5em;}
+.Cinline #divleveld select {float:left; margin-right:10px;}
+.Cinline #divrankd .bn-label {width:auto;}
+.Cinline #divrankd input {width:5em;}
+.Cinline #divlevelm select {float:left; margin-right:10px;}
+.Cinline #divrankm .bn-label {width:auto;}
+.Cinline #divrankm input {width:5em;}
+
+/*---- Module Uevents ----*/
+.Uevents #comment {width:60em;}
+
+/*--- Gestion des comptes ----*/
+.Caccount #divobject { padding: 0 10px;}
+.Caccount #object { width:57em;}
+.Caccount #divadress input { width:19em;}
+.Caccount #divemail input { width:19em;}
+#divinfoTicknet {color:red;}
+#divfrmBuy .bn-label{width:20em;}
+#divfrmBuy input, #divfrmBuy select{width:5em;}
+#divfrmBuy #editObject{width:50em;}
+#divAssoc .bn-label, #divCivil .bn-label {width:7em;}
+#divAssoc .bn-edit input, #divCivil .bn-edit input {width:20em;}
+#divState{float:left;width:280px;}
+
+/*---- Module Inline ----*/
+/*.divCatage {margin-right:15px;}*/
+.Inline .blkData {float:left; width:auto;}
+
+/* Modification d'une inscription */
+.Inline #frmEntrie .tlt3{margin-bottom:5px;}
+.Inline .tlt4 {float:left; width:7em; margin:5px 0 0;}
+.Inline .blkDatav {clear:both;} 
+.Inline .classD {float:left; width:385px;}
+.Inline #divS, .Inline #divD {border-bottom:1px solid #26803B;} 
+
+.Inline .classLevel{float:left; border:none;width:80px;}
+.Inline .classLevel .bn-label{width:4em;}
+
+.Inline .classPoint{float:left;border:none;}
+.Inline .classPoint .bn-label{width:4em;}
+
+.Inline .classDraw{float:right; margin-right:4px;}
+.Inline .classDraw .bn-label{width:4em;}
+.Inline .classDraw select{width:12em;}
+
+.Inline .classSearch{float:left;}
+
+.Inline .classPartner{float:right;margin:4px;}
+.Inline .classPartner .bn-label{width:auto;}
+.Inline .classPartner select{width:12em;}
+
+.Inline .classFam {float:left;margin:4px;}
+.Inline .classFam .bn-label{width:auto;}
+.Inline .classFam input{width:12em;}
+
+.Inline .classFir {float:right;margin:4px;}
+.Inline .classFir .bn-label{width:auto;}
+.Inline .classFir input{width:12em;}
+
+.Inline #divtxtCmt{margin-left:7em; clear:both; margin-right:4px;}
+.Inline #txtCmt {height:4em; width:28em;float:right;}
+.Inline #divtxtCmt .bn-label{width:auto;}
+
+.Inline #divtxtMsg .bn-label{width:auto;}
+.Inline #txtMsg {height:15em; width:35em;}
+
+/*---- Module Login ----*/
+.Login #divName .bn-label{width:6em;}
+.Login #divName{float:left; width:275px;}
+.Login #divPseudo{float:left; width:330px;}
+.Login #pPseudo{clear:both;}
+.Login #lnkPwd{margin-right:20px;}
+
+/*---- Module Adhe ----*/
+.Adhe .badnetBlk2{margin: 0 20px 10px 10px; width:370px;}
+.Adhe .badnetBlk2 .bn-label {width:7em; padding-top:0;}
+.Adhe .badnetBlk2 input{width:20em;}
+.Adhe #divAdhesions{float:left; margin-top:10px;}
+.Adhe #divGridgridCommands{clear:both; margin-top:20px;}
+
+/*---- Module User ----*/
+.User .userBlk {margin: 0px 20px 0 5px; width:383px;}
+.User .userBlk .bn-label {width:7em; }
+.User .userBlk input{width:20em;}
+
+.User #divUser   {float:left; margin-right:10px;} 
+.User #divCivil  {float:left; margin:0;}
+.User #divfrmPassword .bn-label {width:12em;}
+.User #lnkPwd{margin-right:20px;}
+
+/*---- Module Assocs ----*/
+.Assocs #pUserAdmin{clear:both;margin-top:20px; text-align:left;}
+
+/*---- Module Users ----*/
+.Users .badnetBlk2 {width:380px;}
+.Users .badnetBlk2 .bn-label {width:7em; }
+.Users .badnetBlk2 input{width:20em;}
+.Users #divIdentity{margin-left: 20px;}
+.Users #pAssoc{clear:both;margin-top:20px; text-align:left;}
+
+.Users #divfrmBill input {width:27em;}
+.Users #divfrmBill textarea {width:29em;height:8em;}
+
+/*---- Module Badnetclub ----*/
+/* -Demande de privilege- */
+.Cevents #frmChoice #comment {width:571px;}
+
+/* Page liste des tournois */
+.Events #divLgdPubli {float:right; margin-bottom:20px;}
+.Events #divLgdRight {float:right;}
+
+/* Page creation de tournoi */
+.Cevents #lstConditions {text-align:left;}
+
+.Cevents #divGeneralIndiv .bn-label{width:6em;}
+.Cevents #divGeneralIndiv .bn-edit input{width:24em;}
+
+.Cevents #divType{float:left;}
+.Cevents #divType select{width:6em;}
+
+.Cevents #divRegion{float:left;}
+.Cevents #divRegion select{width:10em;}
+.Cevents #divRegion .bn-label{width:6em;}
+.Cevents #divDate .bndate{float:left;margin:0 0 0 8px;}
+
+.Cevents #divChecks .bn-radio{width:10em;}
+.Cevents #divChecks input {width:auto;}
+.Cevents #divCatage, .Cevents #divSerial, .Cevents #divDisci{float:left;}
+.Cevents #divtxtNbDraw{clear:both;}
+.Cevents #divtxtNbDraw input {width:3em;}
+
+.Cevents #divFees1, .Cevents #divFees2{float:left;}
+.Cevents #divFees1 label, .Cevents #divFees2 label{width:6em;}
+.Cevents #divDateGene, .Cevents #divDateDays{float:left;}
+.Cevents #divDates input, .Cevents #divFees input {width:7em;}
+

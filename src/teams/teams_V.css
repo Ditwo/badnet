@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+
+#theDiv div{
+display:inline;
+}
+#Go {
+	margin-top:2px;
+}

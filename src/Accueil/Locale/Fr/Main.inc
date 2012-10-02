@@ -1,0 +1,35 @@
+<?php 
+define('LOC_P_HELP_TOURNAMENT_POONA','Le tournoi est recherché dans la liste des demandes d\'autorisation déposées dans Poona. La recherche porte sur le nom du tournoi et pour la saison en cours.'); 
+define('LOC_P_HELP_TOURNAMENT_BADNET','Le tournoi est recherché dans la liste des tournois hébergés sur le site BadNet. La recherche porte sur le nom du tournoi et pour la saison en cours.'); 
+define('LOC_P_HELP_PLAYER','Pour trouver la fiche résultat d\'un joueur indiquer soit son numéro de licence soit son nom. Le nom peut-être précédé de Mr ou Mme et suivi du prénom pour limiter la recherche. Le caractère espace est utilisé pour séparer les informations, aussi dans le nom ou le prénom, les espaces doivent être remplacés par le caractère souligné \'_\'.'); 
+define('LOC_TITLE_HELP','Recherche rapide'); 
+define('LOC_TITLE_INTERCLUB','Interclubs'); 
+define('LOC_TITLE_NEXT_TOURNAMENT','Prochains tournois'); 
+define('LOC_TITLE_LAST_RESULTS','Derniers résultats'); 
+define('LOC_OPTION_INLINE','Inscription en ligne'); 
+define('LOC_OPTION_CIRCUITS','Circuits'); 
+define('LOC_OPTION_PLAYERS','Fiche individuelle de résultats'); 
+define('LOC_OPTION_TOURNAMENTS_BADNET','Tournois hébergés sur BadNet'); 
+define('LOC_OPTION_TOURNAMENTS_POONA','Tournois du calendrier Poona'); 
+define('LOC_LABEL_IN','dans'); 
+define('LOC_LABEL_ALL_NEWS','Toutes les news ...'); 
+define('LOC_LABEL_SEARCH','Trouver'); 
+define('LOC_TITLE_TUTOS','Tutoriels du site'); 
+define('LOC_TITLE_DOCUMENTATION','Documentation'); 
+define('LOC_ITEM_INSTALLATION','Installation'); 
+define('LOC_ITEM_EVOLUTION','Journal des évolutions'); 
+define('LOC_ITEM_FORUM','Forum'); 
+define('LOC_ITEM_DOWNLOAD','Téléchargement'); 
+define('LOC_TITLE_CHAMPIONSHIP','Championnat nationaux'); 
+define('LOC_TITLE_TIJ','Trophée Inter régional Jeune(TIJ)'); 
+define('LOC_TITLE_TEJ','Trophée Elite Jeune(TEJ)'); 
+define('LOC_TITLE_SITE','Sites Web'); 
+define('LOC_TITLE_NAT','Interclubs nationaux'); 
+define('LOC_TITLE_REG','Interclubs régionaux'); 
+define('LOC_TITLE_DEPT','Interclubs départementaux'); 
+define('LOC_TITLE_SOFT','Logiciel'); 
+define('LOC_TITLE_PLAYER','Joueurs'); 
+define('LOC_TITLE_ASSOC','Association'); 
+define('LOC_TITLE_INDIV','Tournois individuels'); 
+define('LOC_TITLE_INTERCODEP','Intercodep'); 
+?>

@@ -1,0 +1,8 @@
+# This file is local/.htaccess -- the default distribution contains this
+# file to prevent local/ scripts from being accessed directly by browsers
+# (this is a potential, albeit very unlikely, security hole).
+#
+<Files ~ "\.cnx$"> 
+   Order allow, deny
+   Deny from all
+</Files>

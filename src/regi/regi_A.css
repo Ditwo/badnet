@@ -1,0 +1,30 @@
+.classRegi{
+   border : 1px solid  #000;
+}
+
+#blkInfo div{ 
+float:left;
+ }
+
+#blkInfo{ 
+display:block;
+ }
+
+#blkAverage div, #blkClasse div{ 
+padding-top: 5px;
+ }
+
+#mLevel, #mPoints, #mClasse, #mTableau, #mPartenaire{text-align:center;}
+#mPartenaire{margin-bottom:30px;}
+#blkRank span{ 
+width:6em;
+ }
+
+#blkAverage span, #blkDraw span, #blkPair span, #blkClasse span{ 
+display:none;
+ }
+
+#blk1, #blk2{clear:both;}
+#blkB{clear:both;}
+#ktotal, #blkB input{float:left;}
+#ktotal .kLabel{width:auto;}

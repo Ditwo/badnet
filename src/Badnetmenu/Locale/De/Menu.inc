@@ -1,0 +1,33 @@
+<?php 
+define('LOC_ITEM_TIES','Turniere'); 
+define('LOC_ITEM_MY_TEAMS','Turniere'); 
+define('LOC_ITEM_MY_TIES','Libelle DE'); 
+define('LOC_ITEM_EVENT','Turniere'); 
+define('LOC_ITEM_TRANSFERT','Libelle DE'); 
+define('LOC_ITEM_IMPORT','Libelle DE'); 
+define('LOC_ITEM_TOURNAMENTS','Turniere'); 
+define('LOC_ITEM_RESULTS','Turniere'); 
+define('LOC_ITEM_TOUR','Turniere'); 
+define('LOC_ITEM_INLINE','Online Anmeldung'); 
+define('LOC_ITEM_MY_ACCOUNT','Mein Konto'); 
+define('LOC_ITEM_MY_CLUB','Libelle DE'); 
+define('LOC_ITEM_MY_PLAYERS','Libelle DE'); 
+define('LOC_ITEM_MY_TOURNAMENTS','Meine Turniere'); 
+define('LOC_ITEM_ADMINISTRATION','Administration'); 
+define('LOC_MSG_EMAIL_SEND','E-Mail verschicken'); 
+define('LOC_TITLE_EMAIL','E-Mail verschicken'); 
+define('LOC_LABEL_OBJECT','Betreff'); 
+define('LOC_LABEL_FROM','Ihre Adresse'); 
+define('LOC_LABEL_BODY','Nachricht'); 
+define('LOC_TIP_EMAIL','Kontakt'); 
+define('LOC_ITEM_LIVE','Turniere'); 
+define('LOC_ITEM_UMPIRE','Turniere'); 
+define('LOC_ITEM_ACCOUNTS','Kontos'); 
+define('LOC_ITEM_ADHES','Mitglieder'); 
+define('LOC_ITEM_MEMBERS','Spieler'); 
+define('LOC_ITEM_ASSOCS','Verein'); 
+define('LOC_ITEM_USER','Benutzung'); 
+define('LOC_ITEM_MY_RESULTS','Meine Turniere'); 
+define('LOC_ITEM_ADHESION','Mitgliedschaft'); 
+define('LOC_TIP_LOGOUT','Abmelden'); 
+?>

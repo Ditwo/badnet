@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calendar>
+	<version>1.0.0</version>
+	<date>2009-08-03</date>
+	<club name='Club numero 1' stamp='C1'>
+		<pseudo>Minimes</pseudo> # Le pseudo sera utilisé pour indiquer le lieu du club 
+		<dpt>31</dpt> # Departement du club
+	</club>
+	<club name='Club numero 2' stamp='C2'>
+		<pseudo>Mirail</pseudo>  
+		<dpt>31</dpt> 
+	</club>
+	<club name='Club numero 3' stamp='C3'>
+		<pseudo>Toac</pseudo>  
+		<dpt>31</dpt> 
+	</club>
+	<division name="Division 1" stamp="D1">
+		<group name='Poule A' stamp='A'>
+			<type>AR</type> # type du groupe : A | AR | KO
+			<ranking>CG</ranking> # type du calcul de classement : CG | RP
+			<nb_ms>5</nb_ms> # nombre de simple homme
+			<nb_ws>0</nb_ws> # nombre de simple dame
+			<nb_md>0</nb_md> # nombre de double homme
+			<nb_wd>0</nb_wd> # nombre de double dame
+			<nb_xd>0</nb_xd> # nombre de mixte
+			<match_win>1</match_win> # nombre de points par match gagné
+			<match_loose>0</match_loose> # nombre de points par match perdu
+			<match_ab>0</match_ab> # nombre de points par match abandonnée ou forfait involontaire
+			<match_wo>0</match_wo> # nombre de points par match forfait volontaire
+			<tie_win>3</tie_win> # nombre de points par rencontre gagnée
+			<tie_equal>2</tie_equal> # nombre de points par rencontre à égalité
+			<tie_loose>1</tie_loose> # nombre de points par rencontre perdue
+			<tie_wo>-2</tie_wo> #nombre de points par rencontre forfait
+			<team name='Equipe 1' stamp='E1'>
+				<date>2009-08-01</date> # Date d'inscription de l'équipe
+				<club>C1</club>   # stamp du club
+			</team>
+			<team name='Equipe 2' stamp='E2'>
+				<date>2009-08-01</date>
+				<club>C2</club>
+			</team>
+			<team name='Equipe 3' stamp='E3'>
+				<date>2009-08-01</date>
+				<club>C3</club>
+			</team>
+		</group>
+	</division>
+	<tie>
+		<division>D1</division>         #stamp de la division
+		<group>A</group>		        # stamp du groupe (de la poule)
+		<team_hote>E1</team_hote>       # stamp de l'equipe hote
+		<team_visitor>E2</team_visitor> #stamp de l'equipe visiteuse
+		<date>2009-10-06 20:00</date>   #date de la rencontre
+	</tie>
+	<tie>
+		<division>D1</division>
+		<group>A</group>		
+		<team_hote>E1</team_hote>
+		<team_visitor>E3</team_visitor>
+		<date>2009-10-13 20:00</date>
+	</tie>
+	<tie>
+		<division>D1</division>
+		<group>A</group>		
+		<team_hote>E2</team_hote>
+		<team_visitor>E3</team_visitor>
+		<date>2009-10-20 20:00</date>
+	</tie>
+	<tie>
+		<division>D1</division>
+		<group>A</group>		
+		<team_hote>E2</team_hote>
+		<team_visitor>E1</team_visitor>
+		<date>2009-11-01 20:00</date>
+	</tie>
+	<tie>
+		<division>D1</division>
+		<group>A</group>		
+		<team_hote>E3</team_hote>
+		<team_visitor>E1</team_visitor>
+		<date>2009-11-08 20:00</date>
+	</tie>
+	<tie>
+		<division>D1</division>
+		<group>A</group>		
+		<team_hote>E3</team_hote>
+		<team_visitor>E2</team_visitor>
+		<date>2009-11-15 20:00</date>
+	</tie>
+</calendar>

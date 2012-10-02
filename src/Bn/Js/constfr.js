@@ -1,0 +1,12 @@
+var c_s_ct1="Format d'heure invalide. Le format correct est hh:mm:ss.";
+var c_s_ct2="le jour doit etre compris entre 0 et 23.";
+var c_s_ct3="les minutes doivent etre comprises entre 0 et 59.";
+var c_s_ct5="les secondes doivent etre comprises entre 0 et 59.";
+var c_s_cd1="Format de date invalide. Le format correct est jj/mm/aaaa.";
+var c_s_cd2="le jour doit etre compris entre 1 et 31.";
+var c_s_cd3="le mois doit etre compris entre 1 et 12.";
+var c_s_cd4="Ce mois n'a pas 31 jours.";
+var c_s_cd5="Le mois de fevrier n'a pas autant de jours pour l'année saisie.";
+var c_s_cn1="Vous devez entrez un nombre.";
+var c_s_cn2="Vous devez entrez un nombre plus petit que ";
+var c_s_cn3="Vous devez entrez un nombre plus grand que ";

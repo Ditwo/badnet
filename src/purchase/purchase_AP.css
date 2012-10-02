@@ -1,0 +1,101 @@
+body{
+  font-size: 0.8em;
+  background: #fff;
+  color: #000;
+  font-family: Tahoma, Arial, serif;
+  margin:0;
+  width: 5cm;
+}
+
+#container{
+  width: 5cm;
+  margin : 0;
+  padding:2px;
+}
+
+#head{
+  display:none;
+}
+
+#k_cmdDate{
+  text-align : center;
+  border:none;
+/*  font-weight: bold;*/
+  color: blue;
+margin:0;
+}
+
+#tPurchase{
+  display:none;
+}
+#k_regiSolde{
+  display:none;
+}
+#k_regiRest{
+  display:none;
+}
+#k_items{
+  display:none;
+}
+#k_du{
+  display:none;
+}
+#k_rest{
+  display:none;
+}
+#blkCunt{
+  display:none;
+}
+#blkBarCod{
+  display:none;
+}
+#blkBtn{
+  display:none;
+}
+#LegblkRegi{
+  display:none;
+}
+#blkRegi{
+  border:none;
+}
+#blkRegi span{
+	width:3.5cm;
+	display:block;
+	float:left;
+	text-align:right;
+	}
+#k_regiName span{
+  display:none;
+}
+#k_regiName {
+  font-weight: bold;
+margin:0;
+}
+
+#k_members{
+display:none;
+}
+#tLastCommand{
+display:none;
+}
+#k_qui span{
+  display:none;
+}
+#k_qui {
+  font-weight: bold;
+margin:0;
+}
+#k_total{
+display:none;
+}
+#k_discount{
+display:none;
+}
+#k_combien{
+display:none;
+}
+
+
+
+
+

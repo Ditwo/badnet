@@ -1,0 +1,63 @@
+#menuUsers li{
+float:left;
+}
+
+
+/*
+#blkUser{
+ padding:5px;
+ text-align: left;
+ border: 1px solid #000;
+ margin:0 5px 5px 5px;
+}
+#blkUser span {
+  width : 15em; 
+}
+
+
+#blkInfoUser{
+ float:left;
+ padding:5px;
+ text-align: left;
+ border: 1px solid #000;
+ margin:0 5px 5px 5px;
+}
+
+#usersName { 
+  font-size: 2em;
+  background : white;
+  border: 2px solid #0f0;
+  margin: 0 0 10px 0;
+}
+
+#blkInfoUser span {
+   display:block;
+  float:left;
+  text-align: right;
+  font-weight : bold; 
+  margin-right : 5px;
+  width : 15em; 
+}
+
+#blkType {
+  margin-top: 5px;
+  display:block;
+  text-align:center;
+  background-color: #d5d5d5;
+}
+
+#menuEvents{
+float:left;
+clear:both;
+}
+
+#menuEvents li{
+ display: inline;
+ margin-right:1px;
+}
+
+*/
+
+
+
+

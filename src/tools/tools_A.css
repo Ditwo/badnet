@@ -1,0 +1,85 @@
+#blkUser {
+ border: 1px solid #000;
+ float:left;
+}
+
+#blkInfo p{
+  margin : 2px;
+ text-align:left;
+}
+
+#blkInfo span{
+  display:block;
+  float:left;
+  text-align: right;
+  font-weight : bold; 
+  margin-right : 5px;
+  border-bottom : 1px dashed #ccc; 
+  width:12em; 
+}
+
+#blkParam {
+ border: 1px solid #000;
+ float : left;
+ margin-left:5px;
+ margin-bottom:5px;
+}
+
+#blkParam p{
+  margin : 2px;
+ text-align:left;
+}
+
+#blkParam span{
+  display:block;
+  float:left;
+  text-align: right;
+  font-weight : bold; 
+  margin-right : 5px;
+  border-bottom : 1px dashed #ccc; 
+  width:18em; 
+}
+
+#blkParams span{
+  width:18em; 
+}
+
+
+#blkBtn  {
+  margin:8px;
+}
+
+#blkBtn p {
+  display:inline;
+  width: 10em;
+}
+
+#tEditParam{
+  font-size: 15px;
+  background-color: #AAA;
+  font-family : Verdana,Helvetica,sans-serif; 
+  font-weight: bold;
+}
+
+
+
+#userName { 
+  text-align : center;
+  font-size: 2em;
+  background : white;
+  border: 2px solid #0f0;
+  margin: 0 0 10px 0;
+}
+
+#lgdRight p {
+   display : inline;
+}
+
+#menuEvent  {
+ clear:both;
+ text-align:left;
+}
+#menuEvent  li{
+   display:inline;
+}
+

@@ -1,0 +1,244 @@
+/* Chrono */
+.bn-court{
+	padding: 0;
+  	margin: 0 5px 0 0;
+  	float:left;
+}
+.bn-num{
+	padding: 0;
+  	margin: 0;
+  	float:left;
+}
+.bn-court-free a{font-size: 23px;}
+.bn-court-free a:hover{font-size: 23px;}
+.bn-court-free{
+	height : 31px;
+  	padding: 5px;
+  	margin: 0;
+  	float:left;
+  	font-size: 23px;
+  	border:1px solid #000;
+   background:green;
+}
+.bn-cmds{
+  	padding:0;
+  	margin:0;
+  	float:left;
+  	border:1px solid #000;
+  	border-left: none;
+}
+.bn-cmd1{
+  width : 27px;
+  height : 13px;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  text-align:center;
+  border: none;
+}
+.bn-cmd2{
+  width : 27px;
+  height : 13px;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  text-align:center;
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+}
+.bn-start{
+  width : 27px;
+  height : 13px;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  text-align:center;
+  border: none;
+  background:transparent;
+}
+.bn-timer{
+  clear:both;
+  font-size: 12px;
+  font-weight: bold;
+  text-align:center;
+  border:1px solid #000;
+}
+.bn-chrono{
+  width: 50px;
+	/*  border:none;*/
+}
+.bn-chrono bn-label{display:none;}
+.bn-chrono input{
+  font-size: 12px;
+  font-weight: bold;
+  background:transparent;
+  text-align:center;
+  width: 50px;
+}
+
+
+/* Choix du fichier */
+.Ttransfert #divfile .bn-label{width:auto;margin-top:3px;}
+
+/* Ordre de match */
+.divOrders {float:left;}
+.dOrder {clear:both;}
+.dOrder .dmDisci{float:left;width:80px;font-weight:bold;font-size:1.4em; margin:0;}
+.dOrder .dmDisci p{margin:0;}
+.dOrder input {width:5em;}
+
+.dmRes {float:left; width:25px;}
+.dmTeam {float:left;}
+
+/* Saisie d'un match */
+.dMatch {clear:both; border-bottom: solid 1px;}
+.dMatch .dmPlayerH{float:left; text-align:left;}
+.dMatch .dmPlayerV{float:left; text-align:right;}
+
+.dMatch #titleh, .dMatch #titlev{color:#227D38;font-size:1.2;font-weight:bold;}
+
+/* Deroulement */
+.tablediv .bn-edit{margin:0;}
+.courtMatch bn-label{display:none;}
+.player{margin:0;}
+.wo{ background-color: #f00;}
+.absent{background-color: #ec6666;}
+.busy{background-color: #fb9614;}
+.umpire{background-color: #d709f7;}
+.rest{background-color: #defa25;}
+.live{background-color: #0ff;}
+
+/* Composition d'equipe */
+.Event .dMatch {clear:both; border-bottom: solid 1px; padding:2px;}
+.Event .dMatch .dmDisci{float:left;width:50px;font-weight:bold}
+.Event .dMatch  p {margin:2px;}
+.Event .dMatch .dmPlayer{float:left;}
+.Event .dMatch .dmPlayer .bn-edit{margin:2px 0;}
+.Event .dMatch .dmPlayer .bn-label{display:none;}
+.Event .dMatch .dmPlayer select {width:350px; text-align:left;}
+
+/* nouveau joueur */
+#dGender .bn-radio {float:left; margin-right:10px;}
+#divCivil #divfamname {clear:both;}
+#divSport {width:400px;}
+
+#divcatage #catage {float:left; margin-right:10px;}
+#divlevels input {float:left; margin-right:10px;}
+#divranks .bn-label {width:auto;}
+#levels, #divranks input {width:5em;}
+#divleveld input {float:left; margin-right:10px;}
+#divrankd .bn-label {width:auto;}
+#leveld, #divrankd input {width:5em;}
+#divlevelm input {float:left; margin-right:10px;}
+#divrankm .bn-label {width:auto;}
+#levelm, #divrankm input {width:5em;}
+
+#teamId   {width:15em;}
+#search {width:10em;}
+
+/* pointage */
+#lgdPresent {float:right;}
+#lgdPresent li {width:auto;}
+
+/* Page principale */
+.pteam{text-align:left;}
+.badnetLgd li {text-align:left; width:15em;margin-bottom:5px;}
+
+/*---------------*/
+/* Beadnet team  */
+/*---------------*/
+.bteam-court{float:left; width:150px; margin: 0 10px 10px 0;}
+.bteam-court-name{float:left;width:64px;border:1px solid #999;margin:0;font-weight:bold;border-bottom:none;}
+.bteam-court-start{float:left;width:40px;border:1px solid #999;margin:0;font-weight:bold;border-bottom:none;}
+.bteam-court-chrono{float:left;width:40px;border:1px solid #999;margin:0;font-weight:bold;border-bottom:none;}
+
+.bteam-slot {float:left; height:88px; width:148px; border:1px solid #999;}
+
+.bteam-col-court{width:148px;}
+
+.bteam-match { height:88px; width:148px; overflow: hidden; border:1px solid #999; margin-bottom:5px;}
+.bteam-slot .bteam-match {border:none;margin:0;}
+.bteam-match-move{margin:0; float:left; cursor:move;}
+.bteam-match-rank{margin:0;float:left;width:30px;}
+.bteam-match-edit{margin:0; float:left; cursor:pointer;}
+.bteam-match-print{margin:0; float:left; cursor:pointer;}
+.bteam-match-hide{margin:0; float:left; cursor:pointer;}
+.bteam-match-up{margin:0; float:left; cursor:pointer;}
+.bteam-match-down{margin:0; float:left; cursor:pointer;}
+.bteam-match-disci{margin:0;float:left; width: 50px; height:18px;}
+.bteam-match-score{margin:0;font-size:8px;}
+.bteam-match-pair{margin-bottom:4px; font-size:10px;text-align:left;}
+.bteam-match-player{clear:both; float:left;margin:0px;width:148px; height:12px;overflow:hidden;}
+.bteam-match .bteam-match-tie{clear:both; float:left;margin:0 0 5px;width:148px; height:12px;overflow:hidden;font-weight:bold;}
+#divCols .bteam-match-tie{display:none;}
+
+.bteam-match-status-30{background-color:#ec6666;}
+.bteam-match-status-31{background-color:#fb9614;}
+.bteam-match-status-32{background-color:#defa25;}
+.bteam-match-status-33{background-color:#0f0;}
+.bteam-match-status-34{background-color:#0ff;}
+.bteam-match-status-35{background-color:#d709f7;}
+.bteam-match-status-36{background-color:#eee;}
+.bteam-match-status-37{background-color:purple;}
+
+.bteam-result-81{font-weight:bold;}
+.bteam-result-82{font-weight:bold;}
+.bteam-result-83{font-weight:bold;}
+
+
+.bteam-live-day{float:left;background:#e8e8e8;
+margin-left:5px; border:1px solid #999;
+padding:0 5px;cursor:pointer;
+font-size:12px; font-weight:bold;}
+
+.bteam-live-day p{margin:3px;}
+.bteam-live-edit, .squa-live-pdf{cursor:pointer; margin:3px 0;}
+
+
+.bteam-live-match-time{float:left; margin:0 0 3px; width:29px;font-size:10px;overflow: hidden;}
+.bteam-live-match-plateau{float:left; margin:0 0 3px; width:103px;font-size:10px;overflow: hidden;}
+
+.bteam-tie{float:left; width:150px; margin-right:10px;}
+.bteam-tie .bn-label{display:none;}
+.bteam-tie select{width:140px;}
+.bteam-tie-order{margin:0; float:left; cursor:pointer;}
+.bteam-tie-edit{margin:0; float:left; cursor:pointer;}
+.bteam-tie-print{margin:0; float:left; cursor:pointer;}
+.bteam-tie-schedule{margin:0; float:left; text-align:right; width:80px;}
+
+.bteam-team-name{margin:0; float:left; cursor:pointer; width:105px; text-align:left;margin-left:5px;}
+.bteam-team-compo{margin:0; float:left; cursor:pointer;}
+.bteam-team-score{margin:0; float:left; width:20px; }
+.bteam-hover{background:#666; color:#fff;}
+
+.Tevent{position: relative;}
+.print-menu{
+    display:none;
+    position:absolute;
+    padding:5px;
+    top:15px;
+    left:20px;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#B3B3B3), to(#eee));
+    background: -webkit-linear-gradient(#B3B3B3, #eee);
+    background: -moz-linear-gradient(#B3B3B3, #eee);
+    background: -ms-linear-gradient(#B3B3B3, #eee);
+    background: -o-linear-gradient(#B3B3B3, #eee);
+    background: linear-gradient(#B3B3B3, #eee);
+
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+}
+.print-menu p{
+    cursor:pointer;
+}
+.print-menu p:hover{
+    text-decoration: underline;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#838383), to(#eee));
+    background: -webkit-linear-gradient(#838383, #eee);
+    background: -moz-linear-gradient(#838383, #eee);
+    background: -ms-linear-gradient(#838383, #eee);
+    background: -o-linear-gradient(#838383, #eee);
+    background: linear-gradient(#838383, #eee);
+}

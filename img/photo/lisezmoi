@@ -1,0 +1,5 @@
+Ce dossier contient les images des photos des équipes. 
+Le nom de chaque fichier est prefixé par l'identifiant 
+du tournoi auquel l'équipe est inscrite. 
+Un tournoi n'a accés qu'aux images dont le nom est préfixé 
+par son identifiant.

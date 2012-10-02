@@ -1,0 +1,36 @@
+#tAssos{
+  text-align: center;
+  font-size: medium;
+  font-family : Verdana,Helvetica,sans-serif; 
+  font-weight: bold;
+}
+
+
+#blkTeam{
+  display:none;
+}
+
+#teamName { 
+  text-align : center;
+  font-size: 2em;
+  background : white;
+  border: 2px solid #0f0;
+  margin-bottom:3px;
+}
+
+#teamName span{
+  display:none;
+}
+
+#tReservations{
+  display:none;
+}
+
+#k_resaDate{
+  display:none;
+}
+
+#reservations{
+clear:both;
+}
+

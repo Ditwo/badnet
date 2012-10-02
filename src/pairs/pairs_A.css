@@ -1,0 +1,29 @@
+.classPair {
+ display:block;
+ padding:0 0 2px 0;
+ /*border:1px solid #ff0;*/
+}
+.classPair span {
+  display:none;
+}
+
+.classPair p {
+ display: inline;
+}
+
+#blkAdmin span{
+ width: 15em;
+}
+
+#definition span{
+ width: 18em;
+}
+
+.classWo{
+ text-decoration: line-through;
+}
+
+#blkPairs{
+  height:300px;
+  overflow:auto;
+}

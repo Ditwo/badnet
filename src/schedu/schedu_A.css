@@ -1,0 +1,131 @@
+#blkMsg {
+  display:block;
+  margin-top:10px;
+}
+
+#blkConvoc{
+  float:left;
+  border: 1px solid #000;
+}
+
+#blkTieList{
+  clear: both;
+  height:400px;
+  overflow:auto;
+}
+
+.classInfo {
+  background:yellow;
+}
+.classWarning {
+  background:orange;
+}
+.classAlert {
+  background:red;
+}
+
+.classSchedu {
+  display:block;
+}
+.classSchedu div {
+  float:left;
+}
+.classSchedu .kLabelR {
+  display:none;
+}
+
+#blkSchedu span {
+  width : 16em;
+}
+
+#tScheduAuto select {
+  width : 16em;
+}
+#tScheduAuto #blkSchedu {
+  float:left;
+}
+
+
+#schedu {
+font-family: Arial, sans-serif;
+font-size: 10px;
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+width: 400px;
+}
+
+#schedu li {
+cursor: move;
+position: relative;
+float: left;
+margin: 2px 2px 0px 0px;
+width: 60px;
+height: 40px;
+border: 1px solid #000;
+text-align: center;
+padding-top: 5px;
+background-color: #eeeeff;
+}
+
+#boxes li p{
+margin: 0px;
+text-align: center;
+}
+
+#k_drawList{
+ float:left;
+ margin-right:10px;
+}
+
+#k_drawList span{
+width :auto;
+text-align:left;
+float:none;
+}
+#k_matchList{
+ float:left;
+ margin-right:10px;
+}
+
+#k_matchList span{
+width :auto;
+text-align:left;
+float:none;
+}
+
+.draw{
+text-align:center;
+font-weight:bold;
+font-size:13px;
+}
+
+.step{
+text-align:left;
+font-weight:bold;
+background: #ccc;
+color : #000;
+}
+
+.match{
+ margin-left:20px;
+}
+
+#menuSchedu{
+clear:none;
+float:left;
+}
+#menuSchedu li{
+display : block;
+width : 130px;
+}
+
+#k_scheduList span{
+width :auto;
+text-align:left;
+float:none;
+}
+
+#scheduList{
+float:left;
+}

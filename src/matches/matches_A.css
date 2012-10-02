@@ -1,0 +1,105 @@
+#blkInfo{
+  display:block;
+  text-align:center;	
+  border : 1px solid #aaa; 
+}
+#blkInfo span{
+  width : 6em;
+  border-bottom : 0px solid #ccc; 
+}
+
+#blkInfo2 span{
+  width : 5em;
+  border-bottom : 2px solid #ccc; 
+}
+
+
+#blkScore{
+  display:block;
+  text-align:center;
+  border: 1px solid #000; 
+}
+
+.classSet span{
+  display:none;
+}
+
+#blkExtra{
+  vertical-align:bottom;
+}
+#blkExtra label{
+  display:block; 
+  padding-bottom:3px;
+}
+
+#blkTime{
+  vertical-align:bottom;
+}
+
+#blkTime span{
+  width : 6em;
+  border-bottom : 0px solid #000; 
+}
+
+#mtchEnd, #mtchBegin {width:8em;}
+
+.classTeam{
+  border: 1px solid #000;
+}
+.classTeam span{
+  border-bottom : 0px solid #000; 
+  width : 7em;
+}
+
+
+/*
+_match_assocId{
+float:left;
+}
+
+#btnNew{
+vertical-align:middle;
+height : 25px;
+}
+
+#k_match_cmt{
+clear :both;
+}
+
+#blkAdmin{
+border: 3px groove #fff;
+}
+
+
+
+
+#blkPair0 span{
+  display:none;
+}
+#blkPair1 span{
+  display:none;
+}
+
+#blkumpire{
+  border: 1px solid #000;
+}
+#blkumpire label{
+  border-bottom : 0px solid #000; 
+  width : 10em;
+}
+
+
+.rest{
+  background :  black;
+  color: #e5e504;
+  font-weight: bold;
+}
+
+.busy{
+  background :  black;
+  color: #ff9400;
+  font-weight: bold;
+}
+
+
+*/

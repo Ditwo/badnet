@@ -1,0 +1,25 @@
+#blkPriceW{
+border:1px solid #000;
+}
+
+#blkPriceWE{
+border:1px solid #000;
+}
+
+#tItems{
+  font-size: 15px;
+  font-family : Verdana,Helvetica,sans-serif; 
+  font-weight: bold;
+}
+
+#tDailyStats{
+  font-size: 15px;
+  font-family : Verdana,Helvetica,sans-serif; 
+  font-weight: bold;
+}
+
+#blkItem span {
+ width : 12em;
+}
+
+

@@ -1,0 +1,91 @@
+.diff {
+ text-align:right;
+ font-weight: bold;
+}
+
+#group span{
+  display:none;
+}
+#group a{ 
+  font-size: 2em;
+  margin-bottom:3px;
+}
+
+#teamName { 
+  font-size: 1.5em;
+  background : #ccc;
+  margin-bottom:3px;
+}
+
+#tieTitle { 
+  text-align : center;
+  font-size: 1.5em;
+  margin-bottom:3px;
+}
+#tieTitle span{
+  display:none;
+}
+
+#ftieres select {
+  width : 340px;
+}
+
+.match{
+ border: 2px outset #000;
+ margin:0px;
+ padding:0px;
+}
+.match span {
+  display:none;
+}
+
+.score div{ 
+padding:4px 0 0 0; 
+}
+
+.ab label{ 
+padding: 5px 0 5px 0; 
+display:block; 
+}
+
+.ab span{ 
+display:inline; 
+}
+
+
+
+#blkTeamL p, #blkTeamR p{
+border: 1px solid #000;
+margin: 0 15px 0 5px;
+display:block;
+float:none;
+}
+
+
+#nameL, #nameR {
+  text-align:center;
+  font-size: 13px;
+  background-color: #ccc;
+  float:left;
+  width : 220px;
+  font-weight: bold;
+}
+
+.blkGroup {
+  text-align:center;
+  margin-right: 15px;	
+  margin-left: auto;	
+  margin-right: auto;	
+  padding-bottom: 5px;	
+  border : 1px solid #000;
+}
+
+
+.lineDate, .lineTime, .lineScore {
+ text-align:center;
+ white-space:nowrap;
+}
+
+.lineTime a{
+ font-size: 15px;
+}

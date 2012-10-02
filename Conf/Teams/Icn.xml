@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+   <discipline>110</discipline>
+   <joueur>
+	  <homme>3</homme>
+	  <femme>3</femme>
+	  <mixte>0</mixte>
+	</joueur>   
+	<poid points='21'>
+		<classement>T5</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='20'>
+		<classement>T10</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='19'>
+		<classement>T20</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='18'>
+		<classement>T50</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='17'>
+		<classement>A1</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='16'>
+		<classement>A2</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='15'>
+		<classement>A3</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='14'>
+		<classement>A4</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='13'>
+		<classement>B1</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='12'>
+		<classement>B2</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='11'>
+		<classement>B3</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='10'>
+		<classement>B4</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='9'>
+		<classement>C1</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='8'>
+		<classement>C2</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='7'>
+		<classement>C3</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='6'>
+		<classement>C4</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='5'>
+		<classement>D1</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='4'>
+		<classement>D2</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='3'>
+		<classement>D3</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='2'>
+		<classement>D4</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+	<poid points='0'>
+		<classement>NC</classement>
+		<rang_min>0</rang_min>
+		<rang_max>0</rang_max>
+	</poid>
+</rules>

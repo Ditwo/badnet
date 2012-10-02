@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT calendar (version,date,club+,division+,tie+)>
+<!ELEMENT club (#PCDATA|dpt|pseudo)*>
+<!ATTLIST club
+	name CDATA #IMPLIED
+	stamp NMTOKEN #IMPLIED
+>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT division (#PCDATA|group)*>
+<!ATTLIST division
+	name CDATA #IMPLIED
+	stamp NMTOKEN #IMPLIED
+>
+<!ELEMENT dpt (#PCDATA)>
+<!ELEMENT group (#PCDATA|match_ab|match_loose|match_win|match_wo|nb_md|nb_ms|nb_wd|nb_ws|nb_xd|ranking|team|tie_equal|tie_loose|tie_win|tie_wo|type)*>
+<!ATTLIST group
+	name CDATA #IMPLIED
+	stamp NMTOKEN #IMPLIED
+>
+<!ELEMENT match_ab (#PCDATA)>
+<!ELEMENT match_loose (#PCDATA)>
+<!ELEMENT match_win (#PCDATA)>
+<!ELEMENT match_wo (#PCDATA)>
+<!ELEMENT nb_md (#PCDATA)>
+<!ELEMENT nb_ms (#PCDATA)>
+<!ELEMENT nb_wd (#PCDATA)>
+<!ELEMENT nb_ws (#PCDATA)>
+<!ELEMENT nb_xd (#PCDATA)>
+<!ELEMENT pseudo (#PCDATA)>
+<!ELEMENT ranking (#PCDATA)>
+<!ELEMENT team (#PCDATA|club|date)*>
+<!ATTLIST team
+	name CDATA #REQUIRED
+	stamp NMTOKEN #REQUIRED
+>
+<!ELEMENT team_hote (#PCDATA)>
+<!ELEMENT team_visitor (#PCDATA)>
+<!ELEMENT tie (#PCDATA|date|division|group|team_hote|team_visitor)*>
+<!ELEMENT tie_equal (#PCDATA)>
+<!ELEMENT tie_loose (#PCDATA)>
+<!ELEMENT tie_win (#PCDATA)>
+<!ELEMENT tie_wo (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT version (#PCDATA)>

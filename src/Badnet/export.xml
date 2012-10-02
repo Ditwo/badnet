@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<competition>
+  <table>
+    <table_name>numreg</table_name>
+    <field>
+      <field_name>cptr_eventId</field_name>
+      <type>bigint(21)</type>
+      <null></null>
+      <key>MUL</key>
+      <default>0</default>
+      <extra></extra>
+    </field>
+    <field>
+      <field_name>cptr_regId</field_name>
+      <type>bigint(21)</type>
+      <null></null>
+      <key></key>
+      <default>0</default>
+      <extra></extra>
+    </field>
+  </table>
+</competition>

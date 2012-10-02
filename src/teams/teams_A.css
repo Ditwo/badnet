@@ -1,0 +1,30 @@
+#state { 
+ display:inline;
+float:left;
+}
+#logo { 
+ display:inline;
+float:right;
+}
+
+#formTeam { 
+ display:none;
+}
+
+#formPlus input, #formPlus div { 
+ display:inline;
+}
+
+
+#teamList{ 
+  text-align:center;
+  font-size: 1.5em;
+  margin-bottom : 5px;
+}
+#teamList option{ 
+  font-size: 1em;
+}
+
+#k_teamList span{
+ display : none;
+}

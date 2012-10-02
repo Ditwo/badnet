@@ -1,0 +1,28 @@
+* {
+  font-family : Arial, helvetica, sans-serif;
+  font-size : 11px;
+  padding:0;
+  margin:0;        
+}
+
+img{
+  border:none;
+}
+
+#k_selectList, #k_roundList
+{
+  margin-bottom:15px;
+}
+
+#k_selectList span, #k_roundList span
+{
+display:none;
+}
+
+.blkNewPage{
+ clear:both;
+}
+
+.classWo{
+ text-decoration: line-through;
+}

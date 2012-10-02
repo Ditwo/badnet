@@ -1,0 +1,6 @@
+Ce dossier contient les images des affiches et des logo des documents
+Pdf et des badges des tournois.
+Le nom de chaque fichier est prefixé par l'identifiant 
+du tournoi. 
+Un tournoi n'a accés qu'aux images dont le nom est préfixé 
+par son identifiant.

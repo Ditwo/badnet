@@ -1,0 +1,463 @@
+/*--------------------------------------*/
+/* Fichier de mise en page d'un tournoi */
+/* pour un utilisateur connecte        */
+/*--------------------------------------*/  
+
+/*-----------------------------*/
+/*  Menu principal du tournoi  */
+/*-----------------------------*/
+
+.onglet2{
+ border-bottom: 2px solid #3da558;
+ margin : 0 2px 0 2px;
+}
+.onglet2 li{
+ display:inline;
+}
+
+.onglet2 .select{	
+  position :relative;
+  top : 2px;
+  border : 2px solid  #3da558;
+  border-bottom : none;
+  background-color: #fff;
+}
+
+
+.cont2{
+ padding:5px;
+ border: 2px solid #3da558;
+ border-top: none;
+ background: transparent;
+ margin : 0 2px 2px 2px;
+}
+
+#menuEvent li{
+  float:left;
+}
+
+#menuAdmin li{
+float: right;
+}
+
+#menuPad{	
+}
+
+/*-----------------------------*/
+/*  Menu de deuxieme niveau    */
+/*-----------------------------*/
+
+.onglet3{
+ border-bottom: 2px solid #444 ;
+ padding: 5px 0 3px 0;
+}
+.onglet3 li{
+ display:inline;
+}
+
+.onglet3 .select{	
+  border: 2px solid #444;
+  border-bottom : none;
+  background-color: #ccc;
+}
+
+.cont3{
+ padding:5px;
+ border: 2px solid #444;
+ border-top: none;
+ background-color: #ccc;
+}
+
+/*------------------------*/
+/*  Blocs informatifs     */
+/*------------------------*/
+/* Presentation du bloc */
+.blkData {
+ width : 350px;
+ border: 1px solid #000;
+ padding: 0px 0 5px 0;
+ margin-right:5px;
+ margin-bottom:5px;
+ float:left;
+ background-color: #eee;
+ padding: 0;
+}
+
+/* Les champs */
+.blkData p{
+  text-align:left;
+  margin-bottom:5px;
+}
+
+/* Les labels */
+.blkData span{
+  display:block;
+  float:left;
+  text-align: right;
+  font-weight : bold; 
+  margin-right : 5px;
+  border-bottom : 1px dashed #ccc; 
+  width:15em; 
+}
+
+/* Les titres */
+.titre{ 
+   font-family: Tahoma, Arial, serif;
+   font-size: 13px;
+   font-weight: bold;
+   padding-left:5px;
+   border-bottom: 2px solid #000; 
+ }
+
+
+/*-----------------------------*/
+/*  Listes (joueur, club...)  */
+/*-----------------------------*/
+/* Le tableau */
+.kRow{
+  border: none;
+}
+
+/* Titre des colonnes */
+.kHead {   
+  color: #fff;
+  background : #3da558;
+  font-weight: bold;
+}
+/* Lignes paires */
+.kRow0 {   
+  color: #000;
+  background : #eee;
+  font-size: 11px;
+}
+
+/* ligne impaires */
+.kRow1  {
+  color: #000;
+  background : #eee;
+  font-size: 11px;
+}
+
+/* Numero de ligne */
+.kNumCell0  {
+  width:20px;
+  color: #000;
+  background : #cecece;
+  font-weight: bold;
+}
+
+.kNumCell1 {   
+  color: #000;
+  background : #cecece;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Ligne de rupture */
+.kRowBreak{
+  color: #000;
+  background : #d0ddd0;
+  font-family : Verdana,Helvetica,sans-serif; 
+  font-weight: bold;
+}
+
+/*-----------------------------*/
+/*  Liste deroulante de choix  */
+/*-----------------------------*/
+#selectList{ 
+  text-align:center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#selectList option{ 
+  font-size: 1em;
+  text-align:left;
+}
+
+#selectList span{ 
+  display:none;
+}
+
+/*-----------------------------*/
+/*  Presentation des poules    */
+/*-----------------------------*/
+/* Nom de la poule */
+.classGroupTitle{
+  text-align:center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
+  background : #779977;
+}
+/* Nom des paires premiere ligne */
+.classGroupPair{
+  text-align:center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  background : #779977;
+}
+/* Nom des paires premiere colonne */
+.classGroupPairL{
+  width:225px;
+  text-align:left;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  background : #779977;
+}
+
+.classGroupPairL a{
+  color: #fff;
+}
+
+/* Tete de serie */
+.classGroupTds{
+ width:25px;
+ background : #3da558;
+ text-align: left;
+}
+
+/* Case vide */
+.classGroupNone{
+ background : #cecece;
+ text-align: center;
+}
+
+/* Case pleine */
+.classGroupData{
+ background : #eee;
+ text-align: center;
+}
+
+/* numero du match */
+.classGroupNum{
+ text-align: center;
+ font-size: 1.2em;
+}
+/* Score du vainqueur */
+.classGroupScoreWin{
+ text-align: center;
+ font-weight: bold;
+}
+
+/* Score du perdant */
+.classGroupScoreLoos{
+ text-align: center;
+}
+
+/* Heure du match */
+.classGroupTime{
+ font-weight: bold;
+ text-align: center;
+ font-size: 1.2em;
+}
+/* Ligne de coupe */
+.classGroupBreak{
+ background:transparent;
+}
+
+/*------------------------------*/
+/*  Presentation du calendrier  */
+/*------------------------------*/
+/* Ligne de coupe */
+.classScheduBreak{
+  text-align:center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  background : #779977;
+}
+/* Case normale */
+.classScheduData{
+  background : #ddd;
+}
+
+/* Case de l'heure */
+.classScheduTime{
+  text-align:center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000;
+  background : #779977;
+}
+/* Numero du match */
+.classScheduNum{
+  text-align:center;
+}
+/* Tableau */
+.classScheduDraw {
+  text-align:center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.classScheduDraw a{
+  color : #59536c;
+}
+/* Tour */
+.classScheduStep{
+  text-align:center;
+}
+
+
+/*--------------------------------*/
+/*  Presentation du score en live */
+/*--------------------------------*/
+/* Bloc du terrain */
+.classBlkLive{
+border:1px solid #000;
+margin-left:2px;
+margin-bottom:5px;
+background:#fff;
+height:137px;
+width:500px;
+margin:auto;
+overflow:hidden;
+clear:both;
+}
+
+/* Score */
+.classBlkInfo{
+  float:left;
+  margin-right:2px;
+  height:107px;
+  border:0px solid #000;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Numero de terrain */
+.classNumCourt{
+  padding: 5px;
+  margin: 45px 4px 0px 9px;
+  border:1px solid #000;
+  font-size: 20px;
+}
+
+.classLiveObject{
+float:left;
+width:400px;
+height:180px;
+padding: 0;
+margin:0;
+}
+
+
+/*--------------------------------*/
+/*  Gestion de la competition      */
+/*--------------------------------*/
+.wo{
+  background-color: #f00;
+}
+
+.absent{
+  background-color: #ec6666;
+}
+
+.busy{
+  background-color: #fb9614;
+}
+
+.umpire{
+  background-color: #d709f7;
+}
+
+.rest{
+  background-color: #defa25;
+}
+
+.live{
+  background-color: #0ff;
+}
+
+.classLive{
+  border: 1px solid #000;
+  vertical-align:top;
+}
+
+.classCourt{
+  padding: 0;
+  margin: 0 5px 0 0;
+  float:left;
+}
+
+.classNum{
+  padding: 0;
+  margin: 0;
+  float:left;
+}
+
+.classCourtFree a{
+  font-size: 23px;
+}
+
+.classCourtFree a:hover{
+  font-size: 23px;
+}
+.classCourtBusy a{
+  font-size: 23px;
+}
+.classCourtBusy a:hover{
+  font-size: 23px;
+}
+
+.classCourtFree{
+  height : 31px;
+  padding: 5px;
+  margin: 0;
+  background: #0f0;
+  float:left;
+  font-size: 23px;
+  border:1px solid #000;
+}
+
+.classCourtBusy{
+  height : 31px;
+  padding: 5px;
+  margin: 0;
+  background: #f00;
+  float:left;
+  font-size: 23px;
+  border:1px solid #000;
+}
+
+.classCmds{
+  padding:0;
+  margin:0;
+  float:left;
+  border:1px solid #000;
+  border-left: none;
+}
+
+.classCmd1{
+  width : 25px;
+  height : 13px;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  text-align:center;
+  border: none;
+
+}
+
+.classCmd2{
+  width : 25px;
+  height : 13px;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  text-align:center;
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+}
+
+.classCmd3{
+  width : 25px;
+  height : 13px;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  text-align:center;
+  border: none;
+}

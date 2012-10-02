@@ -1,0 +1,36 @@
+<?php 
+require_once 'Object/Oevent.inc'; 
+define('LOC_EVENT_TYPE_INDIVIDUAL','Individual'); 
+define('LOC_EVENT_TYPE_IC','Interclubs'); 
+define('LABEL_70','Private'); 
+define('LABEL_71','Interclubs'); 
+define('LABEL_72','Championship'); 
+define('LABEL_73','Trophy'); 
+define('LABEL_74','Intercodep'); 
+define('LABEL_79','Other'); 
+define('LABEL_430','Départemental'); 
+define('LABEL_431','Regional'); 
+define('LABEL_432','National'); 
+define('LABEL_433','International'); 
+define('LABEL_434','Inter département'); 
+define('LABEL_435','Inter région'); 
+define('LABEL_436','Club'); 
+define('LABEL_439','Other'); 
+define('LABEL_320','Old french'); 
+define('LABEL_321','French'); 
+define('LABEL_322','Luxembourg'); 
+define('LABEL_323','Squash adult'); 
+define('LABEL_324','Squash young'); 
+define('LABEL_330','Free edition'); 
+define('LABEL_331','3x15'); 
+define('LABEL_332','5x7'); 
+define('LABEL_333','3x21'); 
+define('LABEL_334','5x11'); 
+define('LABEL_335','2 jeux gagnants'); 
+define('LABEL_336','3 jeux gagnants'); 
+define('LABEL_360','First match'); 
+define('LABEL_361','Start draw'); 
+define('LABEL_390','Waiting'); 
+define('LABEL_391','Accepted'); 
+define('LABEL_392','Refused'); 
+?>

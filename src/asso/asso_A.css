@@ -1,0 +1,11 @@
+#assoTypeSearch {
+width: 165px;
+}
+#assoType {
+width: 207px;
+}
+
+
+#blkCriteria, #blkAssoc, #blkTeam {
+   border : 1px solid  #000;
+}

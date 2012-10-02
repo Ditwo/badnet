@@ -1,0 +1,174 @@
+body{
+margin:0;
+padding:0;
+  background: #fff;
+}
+input{  
+border:none;
+}
+.score {
+  background: #000;
+  position: absolute;
+  width: 30px;
+  height: 45px;
+  font-family : Verdana,Helvetica,sans-serif;
+  font-size:20px;
+  font-weight:bold;
+  color:#FFF;
+  border:none;
+  text-align:center;
+  vertical-align:middle;
+}
+.scorespeed {
+  position: absolute;
+  width: 30px;
+  height: 45px;
+  background-image: url("../../src/img/font/chars/nall.png");
+  background-repeat:no-repeat;
+  background-position: 0% 0%;
+}
+
+
+.player {
+  font-family : Verdana,Helvetica,sans-serif;
+  font-size:18px;
+  font-weight:bold;
+  background: #fff;
+  position: absolute;
+  left : 12px;
+  width: 215px;
+}
+
+.flag {
+  position: absolute;
+  left : 234px;
+  width: 25px;
+}
+
+.server {
+  font-family : Verdana,Helvetica,sans-serif;
+  font-size:18px;
+  font-weight:bold;
+  position: absolute;
+  left : 266px;
+  width: 10px;
+}
+
+#court {
+margin-top:5px;
+margin-left:5px;
+border: 1px solid #000;
+width  : 386px;
+height : 125px;
+}
+
+#jg {
+  top: 30px;
+}
+#jpg {
+  top: 15px;
+}
+#jig{
+  top: 40px;
+}
+#jd{
+  top: 95px;
+}
+#jpd{
+  top: 80px;
+}
+#jid{
+  top: 105px;
+}
+
+#fpg{
+  top:15px;
+}
+
+#fig{
+  top:40px;
+}
+#fpd{
+  top:80px;
+}
+
+#fid{
+  top:105px;
+}
+
+#spg{
+  top: 15px;
+}
+#sig{
+  top: 40px;
+}
+#spd{
+  top: 80px;
+}
+#sid{
+  top: 105px;
+}
+
+
+#sc1g{
+  top: 15px;
+  left : 283px;
+}
+#sc1d{
+  top: 80px;
+  left : 283px;
+}
+#sc2g{
+  top: 15px;
+  left : 320px;
+}
+#sc2d{
+  top: 80px;
+  left : 320px;
+}
+#sc3g{
+  top: 15px;
+  left : 357px;
+}
+#sc3d{
+  top: 80px;
+  left : 357px;
+}
+
+#pro1 {
+  left: 285px;
+}
+#pro2 {
+  left: 320px;
+}
+#pro3 {
+  left: 357px;
+}
+
+
+#powered{
+  position: absolute;  
+  top: 132px;
+  left :5px;
+  border:none;
+}
+
+#badnet{
+  position: absolute;  
+  top: 137px;
+  left :273px;
+  border:none;
+}
+
+#event{
+  position: absolute;  
+  top: 132px;
+  left :5px;
+  border:none;
+}
+#stage{
+  position: absolute;  
+  top: 132px;
+  left :138px;
+  border:none;
+}

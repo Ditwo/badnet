@@ -1,0 +1,491 @@
+/*--------------------------------------*/
+/* Fichier de mise en page d'un tournoi */
+/* pour les visiteurs                   */
+/*--------------------------------------*/  
+/* Corps de la page */
+body{
+  font-family: Tahoma, Arial, serif;
+  background: #eee;
+  text-align:center;
+  color: #000;
+}
+
+a{
+  color: #58566C;
+  background: transparent;
+
+}
+a:hover { 
+  color: #58566C;
+}
+
+a.kExtUrl {
+  color: #00c;
+}
+a.kExtUrl:hover { 
+  color: #00e;
+}
+
+
+/* Contenant de la page */
+#container{
+  width: 720px;
+  margin-left:auto;
+  margin-right:auto;
+  background: #000;
+   background-image: url("badnet-top.png");
+   background-repeat: no-repeat;
+}
+
+#content{
+ width : 720px;
+}
+
+.kWng{
+  color : #F00;
+}
+.divBtn{
+	height:25px;
+	padding-top:6px;
+	}
+/*-----------------------------*/
+/*  En tete                    */
+/*-----------------------------*/
+#divBadnetTitle{
+	text-align:right;
+	padding:15px;
+	}
+#divBadnetTitle p{
+	font-size:12px;
+	font-weight:bold;
+	background:#000;
+	color : #fff;
+	padding:5px;
+	display:inline;
+}
+
+#divBadnetSubTitle{
+	display:none;	
+}
+
+/*-----------------------------*/
+/*  Menu principal du tournoi  */
+/*-----------------------------*/
+#menuAdmin {
+display:none;
+}
+
+.onglet2{
+  clear:both;
+  margin-top:20px;
+  padding-left:20px;
+  text-transform:uppercase;
+}
+
+.onglet2 a, .onglet2 a:hover{ 
+  color: #fff;
+  font-weight : bold;
+  text-transform:uppercase;
+	}
+	
+.pad{
+  display:none;
+}
+
+#menuEvent li{
+  float:left;
+  margin-left:10px;
+  width: 10em;
+  background-image: url("select.png");
+  background-repeat: repeat-x;
+}
+
+#menuEvent .select{
+  height:22px;
+}
+
+.cont2{
+  padding-top:20px;
+}
+/*-----------------------------*/
+/*  Menu de deuxieme niveau    */
+/*-----------------------------*/
+.onglet3 {
+	margin-top:5px;
+	}
+.onglet3 li{
+  display:block;
+  float:left;
+  font-weight : bold;
+  width: 10em;
+  background : #2EBD3A;
+  margin-left:15px;
+ /* background-image: url("select.png");
+  background-repeat: repeat-x;*/
+}
+.onglet3 a{
+  color : #fff;
+}
+
+.onglet3 .select{	
+  border: 2px solid #fff;
+}
+
+.cont3{
+ clear:both;
+ padding:5px;
+}
+
+/*-----------------------------*/
+/*  Listes (joueur, club...)  */
+/*-----------------------------*/
+/* Le tableau */
+.kRow {   
+  border-collapse:collapse;
+  border: 5px solid #006400; 
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 10px; 
+}
+.kRow td{   
+  border: 5px solid #006400; 
+}
+
+
+/* Titre des colonnes */
+.kHead {   
+  color: #fff;
+  background : #2EBD3A;
+}
+.kRow th{   
+  border: 5px solid #006400; 
+}
+
+/* Lignes paires */
+.kRow0 {   
+  color: #000;
+  background : #fff;
+}
+
+/* ligne impaires */
+.kRow1  {
+  color: #000;
+  background : #fff;
+}
+
+/* Numero de ligne */
+.kNumCell0 {   
+  color : #000;
+  background : #fff;
+}
+
+.kNumCell1 {   
+  color : #000;
+  background : #fff;
+}
+
+/* Ligne de rupture */
+.kRowBreak {   
+  color: #fff;
+  background : #3da558;
+}
+
+/*-----------------------------*/
+/*  Blocs informatifs       )  */
+/*-----------------------------*/
+/* Presentation du bloc */
+.blkInfo{
+  width: 400px;
+  margin-left:auto;
+  margin-right:auto;
+  background : #000;
+  border: 3px solid #ff0;
+  padding-bottom:3px;
+  color:#fff;
+  margin-bottom:3px;
+}
+
+.blkInfo .titre{
+  color: #fff;
+  background : #3da558;
+  font-weight:bold;
+  font-size:15px;
+}
+
+.kInfo{
+	margin-bottom:3px;
+	color:#fff;
+	}
+.kLabel, .blkLegende{
+	color:#fff;
+		}
+/* Les champs */
+
+/* Les labels */
+.blkInfo span{
+  background : #2ebd3a;
+  text-align : center;
+  color : #fff;
+  border: none;
+  padding:3px;
+  width:12em;
+}
+
+#infosPoster{
+  width: 400px;
+  margin-left:auto;
+  margin-right:auto;
+  background : #006400;
+  /*border: 3px solid #f1cd91;*/
+}
+
+/*-----------------------------*/
+/*  Presentation des tableau    */
+/*-----------------------------*/
+.kDraw{
+	color:#fff;
+	}
+.kDrawBottom{
+	border-bottom:solid 1px #fff;
+	}
+.kDrawRight, .kDrawScore{
+	border-right:solid 1px #fff;
+	}
+.kDrawBottomRight{
+	border-right:solid 1px #fff;
+	border-bottom:solid 1px #fff;
+}
+/*-----------------------------*/
+/*  Presentation des poules    */
+/*-----------------------------*/
+/* Nom de la poule */
+.classGroupTitle{
+  color: #fff;
+  background : #3da558;
+}
+/* Nom des paires premiere ligne */
+.classGroupPair{
+  color: #fff;
+  background : #2ebd3a;
+}
+/* Nom des paires premiere colonne */
+.classGroupPairL a{
+  color: #fff;
+}
+.classGroupPairL{
+  color: #fff;
+  background : #2ebd3a;
+}
+
+/* Tete de serie */
+.classGroupTds{
+ width:25px;
+ background : #3da558;
+ color: #3da558;
+ text-align: center;
+ font-weight:bold;
+}
+
+/* Case vide */
+.classGroupNone{
+ background : #cecece;
+ text-align: center;
+}
+
+/* Case pleine */
+.classGroupData{
+ background : #eee;
+ text-align: center;
+}
+
+/* numero du match */
+.classGroupNum{
+ text-align: center;
+ font-size: 1.2em;
+}
+/* Score du vainqueur */
+.classGroupScoreWin{
+ text-align: center;
+ font-weight: bold;
+}
+
+/* Score du perdant */
+.classGroupScoreLoos{
+ text-align: center;
+}
+
+/* Heure du match */
+.classGroupTime{
+ font-weight: bold;
+ text-align: center;
+ font-size: 1.2em;
+}
+/* Ligne de coupe */
+.classGroupBreak{
+ color:#fff;
+ background:#3da558;
+}
+
+/*------------------------------*/
+/*  Presentation du calendrier  */
+/*------------------------------*/
+/* Titre des colonnes */
+.classScheduBreak{
+  color: #fff;
+  background : #3da558;
+  font-weight:bold;
+  font-size:15px;
+}
+
+
+.classScheduMatch{
+  background : #ccc;
+  color : #000;
+}
+
+/* Case de l'heure */
+.classScheduTime{
+  background : #2ebd3a;
+  color : #000;
+  font-weight:bold;
+  text-align:center;
+}
+
+/* Numero du match */
+.classScheduNum{
+  text-align:center;
+}
+
+/* Tableau */
+.classScheduDraw {
+  text-align:center;
+}
+.classScheduDraw a{
+  color : #59536c;
+}
+
+/* Tour */
+.classScheduStep{
+  text-align:center;
+}
+
+/*--------------------*/
+/* Le pied de page    */
+/*--------------------*/
+#badnetFoot{
+  clear:both;
+  border-top: 2px solid  #78777c;
+  font-size : 9px;
+  background-image: url("pied.png");
+}
+
+#badnetLogo {
+float:left;
+margin: 10px 0 0 10px;
+}
+
+#badnetVersion, #divBadnetCache{
+  clear:both;
+  float:right;
+}
+
+#badnetFoot a{
+  color: #78777c;
+  font-size : 9px;
+  text-decoration:underline;
+}
+
+#badnetFoot span, #badnetFoot p, #badnetLink span{
+  border: none;
+  font-weight:normal;
+  font-size:9px;
+  padding-top:2px;
+}
+
+#badnetLink{
+ clear:both;
+ }
+/*--------------------------------*/
+/*  Presentation du score en live */
+/*--------------------------------*/
+/* Bloc du terrain */
+.classBlkLive{
+border:1px solid #000;
+margin-left:2px;
+margin-bottom:5px;
+background:#fff;
+height:137px;
+width:500px;
+margin:auto;
+overflow:hidden;
+clear:both;
+}
+
+/* Score */
+.classBlkInfo{
+  float:left;
+  margin-right:2px;
+  height:107px;
+  border:0px solid #000;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Numero de terrain */
+.classNumCourt{
+  padding: 5px;
+  margin: 45px 4px 0px 9px;
+  border:1px solid #000;
+  font-size: 20px;
+}
+
+.classLiveObject{
+float:left;
+width:400px;
+height:180px;
+padding: 0;
+margin:0;
+}
+/*--------------------*/
+/* La page d'accueil  */
+/*--------------------*/
+#klogin, #kpwd, #k_playersList, #k_teamsList{
+	margin-bottom:5px;
+	text-align:left;
+	padding-top:3px;
+	padding-left:3px;
+}
+#msgNoAccess .kLabel{
+	width: auto;
+	background : #F1CD91;
+	color:#000;
+	text-transform:none;
+	font-weight:normal;
+	display:inline;	  
+	padding:0;
+	}
+
+/*--------------------*/
+/* Colonne de droite  */
+/*--------------------*/  
+/* Colonne */
+#rightCol{
+ width: 110px;
+ font-size: 9px;
+ float:right;
+ color: #fff;
+ margin: 0 5px 0 2px;
+}
+
+/* Les bloc */
+.breve{
+  margin-bottom : 8px;
+  font-size: 11px;
+}
+
+/* Les soustitres */
+.stitre{
+ text-align:left;
+ font-size: 11px;
+ font-weight: bold;
+ clear:both;
+}

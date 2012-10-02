@@ -1,0 +1,19 @@
+#content{
+ margin: 5px 0 5px 0px;
+ /*width: 645px;
+ float:left;*/
+ border: none;
+}
+#leftCol{
+display:none;
+}
+
+#subsList {
+   width: 100px;
+   margin-bottom : 2px;
+}
+
+#ctactManager {
+   width: 100px;
+   margin-bottom : 2px;
+}

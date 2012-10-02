@@ -1,0 +1,125 @@
+body{
+	margin:0;
+	font-family:"Trebuchet MS",Verdana,Arial,sans-serif;
+	}
+	
+/* dimension du court */	
+.court{
+ position:absolute;
+ background-image: url("../img/live/LIVE_nu.png");
+ width:343px;
+ height:157px;
+}	
+
+/* nom des joueurs */
+.player{
+	position:absolute;
+	left:30px;
+	}
+#playerg{top:10px;}
+#playerd{top:93px;}
+
+
+/* Scores de match */
+.score{
+	position:absolute;
+	width:24px;
+	height:30px;
+	background-image: url("../img/live/LIVE_chiffres.jpg");
+}
+.top{ top:12px;}
+.bottom{ top:98px;}
+
+#sc1g, #sc1d{left : 231px;}
+#sc2g, #sc2d{left : 263px;}
+#sc3g, #sc3d{left : 294px;}
+
+/* Nom des equipes */
+.team { 	position:absolute;
+}
+#teamg {top: 63px;
+   left:100px;
+}
+#teamd {top: 63px;
+   left:160px;
+}
+
+/* Points des equipes */
+.points { display:none;}
+
+
+.flag{display:none;
+	position:absolute;
+	width:24px;
+	height:18px;
+	left:200px;
+	}
+#service{
+	position:absolute;
+	width:17px;
+	height:121px;
+	left:10px;
+	top: 10px;
+	background-image: url("../img/live/service.png");
+	background-repeat: no-repeat;
+}	
+#popup{
+	position:absolute;
+	top:63px;
+	left:3px;
+	width:30px;
+	height:14px;
+	cursor:pointer;
+}
+
+
+p {
+	color:#20813A;
+	color:yellow;
+	font-weight:bold;
+	margin:0;
+	position:absolute;
+	top:63px;
+	height:20px;
+	font-size:12px;
+}
+
+#num{
+	left:285px;
+	}
+#event{
+	color:#fff;
+		left:50px;
+	}
+#stage{
+	left:85px;
+	width:145px;
+	text-align:center;
+	}
+#time{
+	color:#fff;
+	left:240px;
+	}
+
+#umpire{
+	height:10px;
+	left:135px;
+	top:140px;
+	width:173px;
+	font-size:10px;
+	text-align:center;
+}
+
+#users{
+	position:absolue;
+	left:10px;
+	top:140px;
+	font-size:8px;
+	text-aligne:left;
+	color:#888;
+}
+
+#wait p{
+	color:#000;
+	}
+

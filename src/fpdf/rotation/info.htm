@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<TITLE>Rotations</TITLE>
+<STYLE>H2 {color:#4000A0}
+.st {font-weight:bold; color:#900000}</STYLE></HEAD>
+<BODY>
+<H2>Rotations</H2>
+<H4 class="st">Informations</H4>Auteur : <A HREF="&#109;ailto:olivier&#64;fpdf.org?subject=Rotations">Olivier</A><BR>Licence : Freeware
+<H4 CLASS="st">Description</H4>Ce script permet d'effectuer une rotation autour d'un centre donné. Il requiert FPDF 1.51.<BR>
+La méthode pour définir une rotation est la suivante :<BR>
+<BR>
+<TT>function Rotate(<B>float</B> angle [, <B>float</B> x [, <B>float</B> y]])</TT><BR>
+<BR>
+<TT>angle</TT> : angle en degrés.<BR>
+<TT>x</TT> : abscisse du centre de rotation. Valeur par défaut : position courante.<BR>
+<TT>y</TT> : ordonnée du centre de rotation. Valeur par défaut : position courante.<BR>
+<BR>
+La rotation affecte tous les éléments qui sont dessinés après avoir appelé la méthode (à
+l'exception des zones cliquables).<BR>
+<BR>
+Remarques :<BR>
+<BR>
+- Seul l'affichage est modifié. Les méthodes GetX() et GetY() ne sont pas affectées, ni le
+mécanisme de saut de page automatique.<BR>
+- La rotation n'est pas conservée de page en page. Chaque page commence avec une rotation nulle.<BR>
+<BR>
+Note : le support des rotations sera intégré à la version 1.6.
+</BODY>
+</HTML>

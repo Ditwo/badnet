@@ -1,0 +1,20 @@
+#blkCriteria{
+   display : inline;
+   border : 1px solid  #000;   
+   vertical-align:top;
+}
+
+.classPhoto{
+   background: black;
+   vertical-align: top;
+   border:1px solid #000;
+}
+
+.classOffo{
+   display : inline;
+   border : 1px solid  #000;   
+   vertical-align:top;
+}
+.classOffo span{
+   width: 10em;
+}

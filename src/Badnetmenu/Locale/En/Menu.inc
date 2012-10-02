@@ -1,0 +1,33 @@
+<?php 
+define('LOC_ITEM_TIES','Ties'); 
+define('LOC_ITEM_MY_TEAMS','My teams'); 
+define('LOC_ITEM_MY_TIES','My ties'); 
+define('LOC_ITEM_EVENT','Tournament'); 
+define('LOC_ITEM_TRANSFERT','Input/Output'); 
+define('LOC_ITEM_IMPORT','Importation'); 
+define('LOC_ITEM_TOURNAMENTS','Tournaments'); 
+define('LOC_ITEM_RESULTS','Results'); 
+define('LOC_ITEM_TOUR','Circuits'); 
+define('LOC_ITEM_INLINE','Libellé EN'); 
+define('LOC_ITEM_MY_ACCOUNT','My tournaments'); 
+define('LOC_ITEM_MY_CLUB','My association'); 
+define('LOC_ITEM_MY_PLAYERS','My players'); 
+define('LOC_ITEM_MY_TOURNAMENTS','Libellé EN'); 
+define('LOC_ITEM_ADMINISTRATION','Administration'); 
+define('LOC_MSG_EMAIL_SEND','Email send.'); 
+define('LOC_TITLE_EMAIL','Send email'); 
+define('LOC_LABEL_OBJECT','Subject'); 
+define('LOC_LABEL_FROM','Your e-mail'); 
+define('LOC_LABEL_BODY','Message'); 
+define('LOC_TIP_EMAIL','Email - Contact badnet'); 
+define('LOC_ITEM_LIVE','Scoring'); 
+define('LOC_ITEM_UMPIRE','Umpires'); 
+define('LOC_ITEM_ACCOUNTS','Accounts'); 
+define('LOC_ITEM_ADHES','Members'); 
+define('LOC_ITEM_MEMBERS','Players'); 
+define('LOC_ITEM_ASSOCS','Associations'); 
+define('LOC_ITEM_USER','Utilisation'); 
+define('LOC_ITEM_MY_RESULTS','My results'); 
+define('LOC_ITEM_ADHESION','Libellé EN'); 
+define('LOC_TIP_LOGOUT','Logout'); 
+?>

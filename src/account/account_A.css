@@ -1,0 +1,95 @@
+#solde{
+ margin-top: 25px;
+}
+#solde label{
+  font-size: 15px;
+  color: red;
+  font-weight : bold; 
+  font-family : Verdana,Helvetica,sans-serif; 
+}
+#solde span{
+  margin-right : 5px;
+  font-weight : normal; 
+  color: #000;
+  width : 11em; 
+}
+
+
+
+#tPurchases{
+ clear:both;
+ text-align:left;
+ font-size: 15px;
+ background : #d0ddd0;
+ font-family : Verdana,Helvetica,sans-serif; 
+ font-weight: bold;
+}
+#tCredits{
+ clear:both;
+ text-align:left;
+ font-size: 15px;
+ background : #d0ddd0;
+ font-family : Verdana,Helvetica,sans-serif; 
+ font-weight: bold;
+}
+#tMembers{
+ clear:both;
+ text-align:left;
+ font-size: 15px;
+ background : #d0ddd0;
+ font-family : Verdana,Helvetica,sans-serif; 
+ font-weight: bold;
+}
+#msgNoPurchases{
+ clear:both;
+}
+#msgNoCredits{
+ clear:both;
+}
+#tAccounts{
+  font-size: 15px;
+  font-family : Verdana,Helvetica,sans-serif; 
+  font-weight: bold;
+}
+
+#msgNoAccounts{
+ clear:both;
+}
+
+#k_accountDate  {
+ float: right;
+}
+#btnGo {
+ float: right;
+}
+#accountValue{
+  float:left;
+  margin-right:20px;
+}
+#accountDiscount{
+  float:left;
+  margin-right:20px;
+}
+#accountPayed{
+  float:left;
+  margin-right:20px;
+}
+#accountSolde{
+  float:left;
+  margin-right:20px;
+}
+#accountValue span{
+  font-weight: bold;
+}
+#accountDiscount span{
+  font-weight: bold;
+}
+#accountPayed span{
+  font-weight: bold;
+}
+#accountSolde span{
+  font-weight: bold;
+}
+#smenuLeft{
+clear:both;
+}

@@ -1,0 +1,117 @@
+#blkAccount { 
+display:nonel;
+}
+
+#blkAccount{
+ text-align: left;
+ border: 1px solid #000;
+ width : 55%; 
+ margin: 5px 1% 5px 2%; 
+ float:left
+}
+#blkAccount span{
+  display:block;
+  float:left;
+  text-align: right;
+  font-weight : bold; 
+  margin-right : 5px;
+  width : 15em; 
+}
+
+#solde{
+ display:none;
+}
+
+
+#tPurchases{
+ clear:both;
+ text-align:left;
+ font-size: 15px;
+ background : #d0ddd0;
+ font-family : Verdana,Helvetica,sans-serif; 
+ font-weight: bold;
+}
+#tCredits{
+ clear:both;
+ text-align:left;
+ font-size: 15px;
+ background : #d0ddd0;
+ font-family : Verdana,Helvetica,sans-serif; 
+ font-weight: bold;
+}
+#tMembers{
+ clear:both;
+ text-align:left;
+ font-size: 15px;
+ background : #d0ddd0;
+ font-family : Verdana,Helvetica,sans-serif; 
+ font-weight: bold;
+}
+#msgNoPurchases{
+ clear:both;
+}
+#msgNoCredits{
+ clear:both;
+}
+#tAccounts{
+  font-size: 15px;
+  font-family : Verdana,Helvetica,sans-serif; 
+  font-weight: bold;
+}
+
+#k_accountDate  {
+/*float:left;*/
+}
+#btnGo {
+ display:none;
+}
+.kBtncss {
+ display:none;
+}
+#countCode{
+ display:none;
+}
+#blkTotal{
+clear:both;
+}
+
+#accountValue{
+  text-align:right;
+  margin-right:20px;
+}
+#accountDiscount{
+  text-align:right;
+  margin-right:20px;
+}
+
+#accountPayed{
+  text-align:right;
+  margin-right:20px;
+}
+#accountSolde{
+  text-align:right;
+  margin-right:20px;
+}
+
+#accountValue span{
+  font-weight: bold;
+}
+#accountDiscount span{
+  font-weight: bold;
+}
+#accountPayed span{
+  font-weight: bold;
+}
+#accountSolde span{
+  font-weight: bold;
+}
+#fpurchase{
+clear:both;
+}
+
+#smenuLeft{
+clear:both;
+}
+#rowsPurchase{
+clear:both;
+}

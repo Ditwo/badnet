@@ -1,0 +1,36 @@
+<?php 
+require_once 'Object/Oevent.inc'; 
+define('LOC_EVENT_TYPE_INDIVIDUAL','Individual'); 
+define('LOC_EVENT_TYPE_IC','Interclubs'); 
+define('LABEL_70','Libellé DE'); 
+define('LABEL_71','Libellé DE'); 
+define('LABEL_72','Libellé DE'); 
+define('LABEL_73','Libellé DE'); 
+define('LABEL_74','Libellé DE'); 
+define('LABEL_79','Libellé DE'); 
+define('LABEL_430','Libellé DE'); 
+define('LABEL_431','Libellé DE'); 
+define('LABEL_432','Libellé DE'); 
+define('LABEL_433','Libellé DE'); 
+define('LABEL_434','Libellé DE'); 
+define('LABEL_435','Libellé DE'); 
+define('LABEL_436','Club'); 
+define('LABEL_439','Other'); 
+define('LABEL_320','Libellé DE'); 
+define('LABEL_321','Libellé DE'); 
+define('LABEL_322','Libellé DE'); 
+define('LABEL_323','Squash adult'); 
+define('LABEL_324','Squash young'); 
+define('LABEL_330','Free edition'); 
+define('LABEL_331','3x15'); 
+define('LABEL_332','5x7'); 
+define('LABEL_333','3x21'); 
+define('LABEL_334','5x11'); 
+define('LABEL_335','2 jeux gagnants'); 
+define('LABEL_336','3 jeux gagnants'); 
+define('LABEL_360','Libellé DE'); 
+define('LABEL_361','Libellé DE'); 
+define('LABEL_390','Libellé DE'); 
+define('LABEL_391','Libellé DE'); 
+define('LABEL_392','Libellé DE'); 
+?>

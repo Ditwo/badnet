@@ -1,0 +1,50 @@
+#lang {
+margin:5px;
+}
+
+#lang li{
+  display: inline;
+}
+
+
+#blkServer{
+  border: 4px groove red;
+}
+
+#blkServer span{
+  width : 23em; 
+}
+
+#blkBase{
+  border: 4px groove orange;
+}
+
+#blkBase span{
+  width: 30em;
+}
+
+#blkAdmi{
+  border: 4px groove green;
+}
+
+#blkAdmi span{
+  width : 15em; 
+}
+
+#blkTitle{
+  border: 1px solid #000;
+  vertical-align:top;
+}
+
+#blkEmail{
+  border: 1px solid #000;
+}
+
+#blkUrl{
+  border: 1px solid #000;
+}
+
+#blkUrl span{
+  width : 20em; 
+}
+
