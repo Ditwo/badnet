@@ -260,9 +260,12 @@ class regi_A
 		$form->addBlock('blkTotal', 'Total');
 
 		$ut = new utils();
-		$nb  = kform::getInput('Nombre', $ut->getPref('cur_nbPlayer', 100));
+		// DBBN - Debut
+		// Modif pour afficher tous les joueurs sur l'ecran de pointage
+		$nb  = kform::getInput('Nombre', $ut->getPref('cur_nbPlayer', 500));
 		$ut->setPref('cur_nbPlayer', $nb);
-		$nbs = array(50=>50, 100=>100, 150=>150, 200=>200, 250=>250);
+		$nbs = array(50=>50, 100=>100, 150=>150, 200=>200, 250=>250, 500=>500);
+		// DBBN - fin
 		$kcombo =& $form->addCombo('Nombre', $nbs, $nb);
 		$acts[1] = array(KAF_UPLOAD, 'regi',
 		WBS_ACT_REGI);
@@ -299,6 +302,7 @@ class regi_A
 		$form->addWng($rows['errMsg']);
 		else
 		{
+		
 	  $krows =& $form->addRows("rowsRegis", $rows);
 
 	  $column[2] = 0;

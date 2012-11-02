@@ -201,6 +201,12 @@ class kRows  extends kElt
 
       if (!$nbRows) return;
 
+		//DBBN - Debut
+		// Ajout div sur liste des joueurs
+	  if ($labelId == "rowsRegis")
+		$text .= "<div id=\"$labelId\">\n";
+		//DBBN - Fin
+		
       $text .= "<table id=\"$labelId\" class=\"kRow\" >\n";
       if ($nbCmdCols)
 	$text .= "<colgroup span=\"$nbCmdCols\" width=\"20\" >\n";
@@ -362,6 +368,11 @@ class kRows  extends kElt
 	  $row = next($this->_attribs);
 	}
       echo "</tbody>\n</table>\n";
+	  //DBBN - Debut
+  	  if ($labelId == "rowsRegis")
+		echo "</div>\n";
+	  //DBBN - Fin
+
       //echo "</div>\n";
     }
   // }}}
@@ -483,7 +494,14 @@ class kRows  extends kElt
 	  $title = $row['title'];
 	  unset ($row['title']);
 	}
-	$text =  "<tr class=\"$class\" title=\"$title\">\n";
+	
+	// DBBN - Debut
+	// Place une ancre sur le premier match de la liste qui est lancé
+	if (isset($row['ancre_match']))
+		$text =  "<tr id=\"ancre\" class=\"$class\" title=\"$title\">\n";
+	else 
+		$text =  "<tr class=\"$class\" title=\"$title\">\n";
+	// DBBN - Debut
 	  
       // Print the number of the row
       if ($this->_isNumber)

@@ -138,6 +138,15 @@ float: right;
   font-size: 11px;
 }
 
+/* DBBN - Debut 
+ Modif pour identifier les joueurs presents sur l'ecran de pointage */
+.kRow2 {
+  color: #000;
+  background : #FFFF00;
+  font-size: 11px;
+}
+/* DBBN - Fin */
+
 /* Numero de ligne */
 .kNumCell0  {
   width:20px;

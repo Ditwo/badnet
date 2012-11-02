@@ -657,11 +657,19 @@ if (!count($ids))
       $ute = new utevent();
       $convocation = $ute->getConvoc();
       
+	  // DBBN - suppression de l'heure du premier match
+	  /*
       $titres = array ('cGender', 'cIdentity','cEntrie',
 		       'cNatNum', 'cConvocation', 'cFirstMatch', 'cVenue');
       $tailles = array (10,65,50,30,35,35,50);
       $styles = array ('','B','','','','','');
+	  */
 
+      $titres = array ('cGender', 'cIdentity','cEntrie',
+		       'cNatNum', 'cConvocation', 'cVenue');
+      $tailles = array (10,65,50,30,35,50);
+      $styles = array ('','B','','','','');
+	  
       $team = $dt->getTeam($teamId);
       $rows['titre'] = $team['team_name'];
       $rows['msg'] = "{$convocation['evnt_textconvoc']}\n{$team['team_textconvoc']}";
@@ -676,8 +684,9 @@ if (!count($ids))
 	      $row[] = $player[1];
 	      $row[] = $player[6];
 	      $row[] = $player[7];
-	      $row[] = $player[10];
-	      $row[] = $player[9];
+		  $row[] = $player[10];
+		  // DBBN - suppression de l'heure du premier match
+	      //$row[] = $player[9];
 	      $row[] = $player[11];
 	      $rows[] = $row;
 	    }

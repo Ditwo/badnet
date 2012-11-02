@@ -306,11 +306,32 @@ class Utdate
 	{
 	  $date = mktime($this->_hours, $this->_minutes, $this->_seconds,
 			 $this->_month,$this->_day,  $this->_year, -1 );
-	  $str = strftime("%d-%m-%y %H:%M", $date);
+		$str = strftime("%d-%m-%y %H:%M", $date);
 	}
       return $str;
     }
   // }}}
+
+// DBBN - debut  
+  /**
+   * Retourne la date au format "%d/%m/%Y %Hh%M"
+   * Utilisee pour les convocations
+   *
+   */
+  function getDateTimeConvoc()
+    {
+      $str = '';
+      if ($this->_hours != 0 || $this->_minutes != 0 || 
+	  $this->_seconds != 0 || $this->_month != 0 || 
+	  $this->_day != 0 ||  $this->_year != 0)
+	{
+	  $date = mktime($this->_hours, $this->_minutes, $this->_seconds,
+			 $this->_month,$this->_day,  $this->_year, -1 );
+		$str = strftime("%d/%m/%Y %Hh%M", $date);
+	}
+      return $str;
+    }
+// DBBN - fin
 
   // {{{ getDateWithDay
   /**

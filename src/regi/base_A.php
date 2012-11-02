@@ -471,7 +471,7 @@ class registrationBase_A extends utBase
 		      'regi_pbl', 'regi_del', 'team_del', 'team_pbl',
 		      'mber_urlphoto', 'mber_born', 'team_noc', //'asso_noc',
 		      'regi_dateauto', 'regi_surclasse', 'regi_datesurclasse',
-				'regi_numcatage');
+				'regi_numcatage', 'regi_present');
 		//      $tables  = array('registration', 'teams', 'ranks', 'rankdef',
 		//	       'members', 'a2t', 'assocs');
 		$tables  = array('registration LEFT JOIN teams ON regi_teamId = team_id',
@@ -556,8 +556,13 @@ class registrationBase_A extends utBase
 				if ($tmp['regi_surclasse'] != WBS_SURCLASSE_NONE)
 				$tmp['regi_catage'] .= " (".$ut->getLabel($tmp['regi_surclasse']).")";
 				//if ($tmp['team_noc'] == '') $tmp['team_noc'] = $tmp['asso_noc'];
-
-
+				
+				// DBBN - Debut
+				// Modif pour identifier les joueurs presents sur l'ecran de pointage
+				if ($entry['regi_present'] == 160)
+					$tmp['class'] = 'kRow2';
+				// DBBN - Fin
+				
 				$id = $entry['regi_id'];
 			}
 			else if (!$isSquash)

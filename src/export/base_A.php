@@ -428,7 +428,10 @@ class exportBase extends utbase
 	function updateEvent($event, $force=false)
 	{
 		$eventId = utvars::getEventId();
-
+		
+		// DBBN - Modif pour retours a la ligne dans les convocs
+		$event["evnt_textconvoc"] = str_replace("<br />","\n",$event["evnt_textconvoc"]);
+		
 		$where = "evnt_id = $eventId";
 		if (!$force)
 		$where .= " AND evnt_updt <= '{$event['evnt_updt']}'";

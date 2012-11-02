@@ -399,14 +399,23 @@ class pdfSchedu extends pdfBase
 		$this->SetFillColor(255,255,255);
 		$this->SetAutoPageBreak(false);
 
+		// DBBN - Modifs des couleurs pour les echeanciers => passage en niveaux de gris
+
 		// Couleurs homme
-		$r[] = array(0xfa, 0xfa, 0xe1, 0x62, 0x3c, 0x3C, 0x85, 0xEA, 0xCF);
-		$g[] = array(0x3c, 0xca, 0xfa, 0xfa, 0xfa, 0x77, 0x3c, 0x3c, 0xCA);
-		$b[] = array(0x3c, 0x3c, 0x3c, 0x3c, 0xdd, 0xfa, 0xfa, 0xfa, 0xCA);
+		//$r[] = array(0xfa, 0xfa, 0xe1, 0x62, 0x3c, 0x3C, 0x85, 0xEA, 0xCF);
+		//$g[] = array(0x3c, 0xca, 0xfa, 0xfa, 0xfa, 0x77, 0x3c, 0x3c, 0xCA);
+		//$b[] = array(0x3c, 0x3c, 0x3c, 0x3c, 0xdd, 0xfa, 0xfa, 0xfa, 0xCA);
 		// Couleurs femmes
-		$r[] = array(0xfa, 0xfa, 0xe8, 0x94, 0x7a, 0x7a, 0xab, 0xf0, 0xCF);
-		$g[] = array(0x7a, 0xda, 0xfa, 0xfa, 0xfa, 0xa2, 0x7a, 0x7a, 0xEA);
-		$b[] = array(0x7a, 0x7a, 0x7a, 0x7a, 0xe7, 0x7a, 0xfa, 0xfa, 0xEA);
+		//$r[] = array(0xfa, 0xfa, 0xe8, 0x94, 0x7a, 0x7a, 0xab, 0xf0, 0xCF);
+		//$g[] = array(0x7a, 0xda, 0xfa, 0xfa, 0xfa, 0xa2, 0x7a, 0x7a, 0xEA);
+		//$b[] = array(0x7a, 0x7a, 0x7a, 0x7a, 0xe7, 0x7a, 0xfa, 0xfa, 0xEA);
+		$r[] = array(204, 204, 204, 204, 204, 204, 204, 204, 204);
+		$g[] = array(204, 204, 204, 204, 204, 204, 204, 204, 204);
+		$b[] = array(204, 204, 204, 204, 204, 204, 204, 204, 204);
+		// Couleurs femmes
+		$r[] = array(204, 204, 204, 204, 204, 204, 204, 204, 204);
+		$g[] = array(204, 204, 204, 204, 204, 204, 204, 204, 204);
+		$b[] = array(204, 204, 204, 204, 204, 204, 204, 204, 204);
 		$ff = array(1=>0,1,0,1,1);
 
 		$numSerie = 0;
@@ -430,15 +439,18 @@ class pdfSchedu extends pdfBase
 			$timeWidth = 15;
 			foreach($times as $time)
 			$nbCells = max(count($time)-1, $nbCells);
-			if ($nbCells > 8)
+
+			// DBBN - Modif pagination en paysage pour 8 terrains
+			//if ($nbCells > 8)
+			if ($nbCells > 7)
 			{
-				$this->orientation = 'L';
 				$this->AddPage('L');
+				$this->orientation = 'L';
 			}
 			else
 			{
-				$this->orientation = 'P';
 				$this->AddPage('P');
+				$this->orientation = 'P';
 			}
 			$width = ($this->_getAvailableWidth()-$timeWidth)/$nbCells;
 
@@ -487,7 +499,7 @@ class pdfSchedu extends pdfBase
 
 				//  Affichage de l'heure
 				$this->Cell($timeWidth, $rowHeight,
-				$time['time'], 'TB', 0, 'C', 1);
+				$time['time'], 'TB', 1, 'C', 1);
 				$this->SetTextColor(0);
 				$this->SetDrawColor(0);
 
@@ -528,7 +540,7 @@ class pdfSchedu extends pdfBase
 						$this->SetXY($posX, $posY+ 2*$lineHeight);
 						$this->SetFont('Arial','I',8);
 						$this->Cell($width, $lineHeight, $lines['value'],
-				  'LR', 0, 'C', 0);		      
+				  'LRB', 0, 'C', 0);		      
 
 						if ($nbCells < 5)
 						{
@@ -548,7 +560,9 @@ class pdfSchedu extends pdfBase
 					$posX += $width;
 				}
 				$posY += $rowHeight;
-				if($posY+$rowHeight > $this->_getBottom())
+				// DBBN - Modif pour changement de page
+				// Origine : if($posY+$rowHeight > $this->_getBottom())
+				if($posY+$rowHeight-5 > $this->_getBottom())
 				{
 					$this->Line($left, $top, $left+$timeWidth, $top);
 					$this->Line($left, $posY, $left+$timeWidth, $posY);
@@ -557,15 +571,22 @@ class pdfSchedu extends pdfBase
 					//$this->Cell(0, 3, "$title $fullDate -$page-",
 					//	      0, 0, 'R', 0);
 					//$page++;
-					if ($nbCells > 8)
+					
+					// DBBN - Modif pagination en paysage pour 8 terrains
+					//if ($nbCells > 8)
+					if ($nbCells > 7)
 					{
-						$this->orientation = 'L';
+						// DBBN - Modif pour placer footer avec la mise en page de la page a fermer
+						//$this->orientation = 'L';
 						$this->AddPage('L');
+						$this->orientation = 'L';
 					}
 					else
 					{
-						$this->orientation = 'P';
+						// DBBN - Modif pour placer footer avec la mise en page de la page a fermer
+						// $this->orientation = 'P';
 						$this->AddPage('P');
+						$this->orientation = 'P';
 					}
 					$top = $this->_getTop();
 					$posY = $top;

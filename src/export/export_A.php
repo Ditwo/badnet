@@ -1603,7 +1603,8 @@ class export_A
 		fwrite($fd,"\n <event\n");
 		foreach($event as $field=>$value)
 		{
-			fwrite($fd,"  $field=\"" . htmlspecialchars($value) . "\"\n");
+			// DBBN - Modif pour retours a la ligne dans les convocs
+			fwrite($fd,"  $field=\"" . htmlspecialchars(nl2br($value)) . "\"\n");
 		}
 		fwrite($fd," >\n");
 

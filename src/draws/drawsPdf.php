@@ -196,6 +196,8 @@ class DrawsPdf
 					// Imprimer les poules
 					$this->_pdfDrawGroupNew($id, $pdf, $isFirst);
 						
+					// DBBN - Supprime l'impression du tableau apres les poules
+					/*
 					// Imprimer le tableau
 					list($drawId, $group) = explode(';', $id);
 					$dids = $utr->getRounds($drawId, WBS_ROUND_MAINDRAW, null, $group);
@@ -204,6 +206,7 @@ class DrawsPdf
 						$did = reset($dids);
 						$this->_pdfDrawKo(0, $did['rund_id'], $pdf);
 					}
+					*/
 					$isFirst = false;
 				}
 				$pdf->end();
@@ -218,6 +221,9 @@ class DrawsPdf
 				$this->_pdfDrawGroupNew($drawId, $pdf, true);
 				// Imprimer le tableau
 				list($drawId, $group) = explode(';', $id);
+				
+				// DBBN - Supprime l'impression du tableau apres les poules
+				/*
 				$utr = new utround();
 				$dids = $utr->getRounds($drawId, WBS_ROUND_MAINDRAW, null, $group);
 				if ( !empty($dids) )
@@ -225,6 +231,7 @@ class DrawsPdf
 					$did = reset($dids);
 					$this->_pdfDrawKo(0, $did['rund_id'], $pdf);
 				}
+				*/
 
 				$pdf->end();
 				exit;
@@ -847,8 +854,8 @@ class DrawsPdf
 		$utr = new utround();
 		$roundsi = $utr->getRounds($drawId, WBS_GROUP, null, $groupName);
 		$roundsg = $utr->getRounds($drawId, WBS_ROUND_GROUP, null, $groupName);
-		$rounds = $roundsi +$roundsg;
-
+		//$rounds = $roundsi +$roundsg;
+$rounds = $roundsg;
 		require_once "utils/utdraw.php";
 		$utd = new utdraw();
 		$draw = $utd->getDrawById($drawId);

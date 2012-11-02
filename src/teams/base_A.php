@@ -909,11 +909,17 @@ class teamsBase_A extends utbase
 	  			$id = $entry['regi_id'];
 	  			$utd->setIsoDateTime($entry['tie_schedule']);
 	  			if ($convocation['evnt_convoc'] == WBS_CONVOC_MATCH)
-	  			$rows[$id]['9'] = $utd->getDateTime();
+				//DBBN - debut
+				//$rows[$id]['9'] = $utd->getDateTime();
+	  			$rows[$id]['9'] = $utd->getDateTimeConvoc();
+				//DBBN - fin
 	  			else
 	  			$rows[$id]['9'] = '--';
 	  			$utd->addMinute(-$convocation['evnt_delay']);
-	  			$rows[$id]['10'] = $utd->getDateTime();
+				//DBBN - debut
+				//$rows[$id]['10'] = $utd->getDateTime();
+	  			$rows[$id]['10'] = $utd->getDateTimeConvoc();
+				//DBBN - fin
 	  			if ($convocation['evnt_lieuconvoc'] == '')
 	  			$rows[$id]['11'] = $entry['tie_place'];
 	  			else

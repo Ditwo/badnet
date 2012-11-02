@@ -187,7 +187,7 @@ class kEdit  extends kElt
   function autoNextField($name)
     { 	
       $this->_attribs['onkeyup'] = 
-	"if (this.value.length>=this.maxLength)".
+	"if ((this.value.length>=this.maxLength) && !isNaN(this.value) && (event.keyCode>=96) && (event.keyCode <= 105))".
 	"{".
 	"document.forms['{$this->_form}']['$name'].focus();".
 	"}";

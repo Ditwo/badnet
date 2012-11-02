@@ -885,6 +885,11 @@ class live_A
 			$date = '';
 			$court =  0;
 			$rows = array();
+			// DBBN - Debut
+			// Flag pour le premier match lancé placé
+			$premierMatchLancePlace = 0;
+			// DBBN - Fin
+			
 			// Pour chaque MATCH
 			foreach ($matches as $match)
 			{
@@ -904,6 +909,15 @@ class live_A
 					$court = $match['tosort'];
 					$rows[] = array(KOD_BREAK, "title", $title);
 				}
+				
+				// DBBN - Debut
+				// Permet de placer une ancre sur le premier match de la liste qui est lancé
+				if ($premierMatchLancePlace == 0 && $match['mtch_status'] == WBS_MATCH_LIVE) {
+					$match['ancre_match'] = 1;
+					$premierMatchLancePlace = 1;
+				}
+				// DBBN - Fin
+				
 				$rows[] = $match;
 			}
 			$krow =& $kform->addRows("rowsList", $rows);
@@ -1069,6 +1083,9 @@ class live_A
 
 		$nbCourt = $ut->getPref('cur_nbcourt', 5);
 		$this->_utpage->_page->addAction('onload', array('startChrono'));
+		//DBBN - Debut
+		$this->_utpage->_page->addJavaFile('live/jquery-1.7.2.min.js');
+		//DBBN - Fin
 		$this->_utpage->_page->addJavaFile('live/live.js');
 		$content =& $this->_utpage->getContentDiv();
 		$kform =& $content->addForm('formLive');

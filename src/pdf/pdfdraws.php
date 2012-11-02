@@ -28,7 +28,16 @@ class  pdfDraws extends pdfBase
 		$xpos = 10;//$this->getX();
 		$ypos = $this->getY();
 		$nbLignes = count($tableau[0][0]);
-		$taille = 4.4;
+		
+		// DBBN - Modif taille des tableaux
+		// Origine : $taille = 4.4;
+		if ($nbLignes <= 16)
+			$taille = 14;
+		else if ($nbLignes <= 31)
+			$taille = 10;
+		else
+			$taille = 7;
+
 		$nbCols = count($tableau);
 		$firstCol = 67;
 		$lgCol = 25;
@@ -96,6 +105,11 @@ class  pdfDraws extends pdfBase
 				$this->SetFont('Helvetica','',7);
 				$this->SetTextColor(90);
 			}
+			
+			// DBBN - modif taille nom
+			$this->SetFont('Helvetica', 'B', 8);
+			// DBBN - Fin
+			
 			$ypos -= $taille/2;
 			$nbLignes = count($tableau[$i][0]);
 			for($j=0;$j<$nbLignes;$j++)
@@ -154,7 +168,9 @@ class  pdfDraws extends pdfBase
 				if((($tableau[$i][1][$j])!='')&&($i!=0))
 				{
 					$this->SetXY($xpos,$ypos+$taille);
-					$this->SetFont('Helvetica', '', 5);
+					// DBBN - modif taille score
+					$this->SetFont('Helvetica', 'B', 6);
+					// DBBN - Fin
 					$this->Cell($largeur,3, $tableau[$i][1][$j], 0, 0, 'C', 0);
 					$this->SetFont('Helvetica','',7);
 				}
@@ -566,7 +582,16 @@ class  pdfDraws extends pdfBase
 		$xpos = 10;//$this->getX();
 		$ypos = $this->getY();
 		$nbLignes = count($tableau[0][0]);
-		$taille = 8.5;
+		
+		// DBBN - Modif taille des tableaux
+		// Origine : $taille = 8.5;
+		if ($nbLignes <= 16)
+			$taille = 14;
+		else if ($nbLignes <= 31)
+			$taille = 10;
+		else
+			$taille = 5;
+		
 		$nbCols = count($tableau);
 		$firstCol = 67;
 		$lgCol = 25;
@@ -631,6 +656,11 @@ class  pdfDraws extends pdfBase
 				$this->SetFont('Helvetica','',7);
 				$this->SetTextColor(90);
 			}
+
+			// DBBN - modif taille nom
+			$this->SetFont('Helvetica', 'B', 8);
+			// DBBN - Fin
+
 			$ypos -= $taille/2;
 			$nbLignes = count($tableau[$i][0]);
 			for($j=0;$j<$nbLignes;$j++)
@@ -746,7 +776,9 @@ class  pdfDraws extends pdfBase
 				if((($tableau[$i][1][$j])!='')&&($i!=0))
 				{
 					$this->SetXY($xpos, $ypos+$taille);
-					$this->SetFont('Helvetica', '', 5);
+					// DBBN - modif taille score
+					$this->SetFont('Helvetica', 'B', 6);
+					// DBBN - Fin
 					$this->Cell($largeur, 3, $tableau[$i][1][$j], '' , 0, 'C', 0);
 					$this->SetFont('Helvetica', '', 7);
 				}
