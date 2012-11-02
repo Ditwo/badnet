@@ -102,7 +102,11 @@ try
 		$result[$row['mtch_num']] = array("court" => $row['mtch_court'], "begin" => $begin);
 	}
 
-	print(json_encode($result));
+    if ($result != null) {
+        print(json_encode($result));
+    } else {
+        print('{}');
+    }
 
     $select->closeCursor();
 }
