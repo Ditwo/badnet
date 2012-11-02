@@ -92,8 +92,8 @@ try
     $sql = "SELECT mtch_num, mtch_begin, mtch_court
 			FROM ${prefix}matchs
 			WHERE mtch_court <> 0
-				AND mtch_score = ''
-			ORDER BY mtch_begin asc";
+				AND mtch_score is null
+                ORDER BY mtch_begin asc";
 
     $select = SPDO::query($sql);
 
