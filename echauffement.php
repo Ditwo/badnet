@@ -30,7 +30,12 @@
 		}
 
 		div#matchs table td.court {
-			font-size: 300%;
+			font-size: 250%;
+			padding: 10px;
+        }
+
+		div#matchs table td.matchnum {
+			font-size: 250%;
 			padding: 10px;
 		}
 
@@ -86,30 +91,33 @@
 
 		function update() {
 			$.getJSON("echauffement.ajax.php", function (data){
-				
-				// ajout des nouveaux matchs
-				for (d in data) {
-					if ($('div#matchs table#match' + d ).length == 0) {
-						t = $('table#template').clone();
-						t.attr('id', 'match' + d);
-						t.addClass('court' + data[d].court);
-						t.addClass('terrainoccupe');
-						$('div#matchs').append(t);
-						$('td.court', t).html(data[d].court);
-						$('td.matchnum', t).html(d);
-						$('td.debut', t).html(new Date(data[d].begin*1000).toTimeString().substring(0,5));
-                        $('td.duree', t).attr('begin', data[d].begin*1000);
-                        $('td.drapeau', t).click(function(){$(this).hide();});
-						t.show();
-					}
-				}
 
-				// suppression des matchs terminés et des terrains vide qui n'on plus lieu d'être
-				$('div#matchs table').each(function(){
-					if (!($('td.matchnum', this).html() in data)) {
-						$(this).remove();
-					}
-				});
+                if (data != null) {
+
+				// ajout des nouveaux matchs
+                    for (d in data) {
+                        if ($('div#matchs table#match' + d ).length == 0) {
+                            t = $('table#template').clone();
+                            t.attr('id', 'match' + d);
+                            t.addClass('court' + data[d].court);
+                            t.addClass('terrainoccupe');
+                            $('div#matchs').append(t);
+                            $('td.court', t).html(data[d].court);
+                            $('td.matchnum', t).html(d);
+                            $('td.debut', t).html(new Date(data[d].begin*1000).toTimeString().substring(0,5));
+                            $('td.duree', t).attr('begin', data[d].begin*1000);
+                            $('td.drapeau', t).click(function(){$(this).hide();});
+                            t.show();
+                        }
+                    }
+
+                    // suppression des matchs terminés et des terrains vide qui n'on plus lieu d'être
+                    $('div#matchs table').each(function(){
+                        if (!($('td.matchnum', this).html() in data)) {
+                            $(this).remove();
+                        }
+                    });
+                }
 
 				// On recrée les match vides
 				for (i = 1; i <= $('#nbcourt').val(); i++) {
@@ -124,6 +132,10 @@
 					}
 				}
 
+				// ensuite on trie
+				function sortNumMatchs(a, b) {
+                    return $(a).html()*1 > $(b).html()*1;
+				}
 				// ensuite on trie
 				function sortMatchs(a, b) {
 					if ($('td.court', a).html() == $('td.court', b).html()) {
@@ -143,6 +155,8 @@
 
 				$('div#matchs').append($('div#temp table'));
 
+                // on met le prochain match
+                $('span#next').html($('div#matchs table.terrainoccupe td.matchnum').sort(sortNumMatchs).last().html().trim()*1+1);
 
 			});
 		}
@@ -162,18 +176,19 @@
 
   </head>
   <body>
-	<div style="float:right;"><a href="javascript:toggleOptions()">Options</a></div>
+    <div style="text-align: center; font-size: 350%;">Prochain Match: <span id="next" style="font-size: 400%"></span></div>
 	<div id="options" style="display:none;">
-		<label for="nbcourt">Nombre de courts : </label><input name="nbcourt" id="nbcourt" value="8" size="2" />
+		<label for="nbcourt">Nombre de courts : </label><input name="nbcourt" id="nbcourt" value="6" size="2" />
 		<label for="echauff">Temps d'échauffement (en secondes) : </label><input name="echauff" id="echauff" value="180" size="5" />
 		<table id="template" style="display:none;">
-			<tr><td rowspan="2" class="court"></td><td class="matchnum"></td></tr>
-			<tr><td class="debut"></td></tr>
-			<tr><td colspan="2" class="duree" begin="">00:00</td></tr>
+			<tr><td rowspan="2" class="court"></td><td class="matchnum">&nbsp;</td></tr>
+			<tr><td class="debut">&nbsp;</td></tr>
+			<tr><td colspan="2" class="duree" begin="">&nbsp;</td></tr>
 			<tr><td colspan="2" class="drapeau">&nbsp;</td></tr>
 		</table>
 	</div>
   	<div id="matchs"></div>
 	<div id="temp"></div>
+	<div style="float:right;"><a href="javascript:toggleOptions()">O</a></div>
   </body>
 </html>
