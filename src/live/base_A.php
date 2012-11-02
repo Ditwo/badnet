@@ -38,7 +38,11 @@ class liveBase_A extends utbase
 		if ($aDate != -1) $where .= " AND date(tie_schedule) ='". $utd->getIsoDate()."'";
 		//if (! $hide) $where .= " AND mtch_status <=".WBS_MATCH_ENDED;
 		$nb = $this->_selectFirst($tables, $fields, $where);
+		// DBBN - Debut
+		// modif du nb de matchs affiches
 		return ceil($nb/100);
+		//return ceil($nb/48);
+		// DBBN - Fin
 	}
 
 	/**
@@ -837,9 +841,17 @@ class liveBase_A extends utbase
 		if ($date != -1) $where .= " AND date(tie_schedule) ='". $utd->getIsoDate()."'";
 		if (! $hide) $where .= " AND mtch_status <=".WBS_MATCH_ENDED;
 		//      echo $where;
-		$start = 100 * ($aPage-1);
-		if ($aOrder) $order = "tosort, tie_schedule, mtch_num LIMIT $start, 100";
-		else $order = "tie_schedule, mtch_num LIMIT $start, 100";
+		
+		// DBBN - Debut
+		// Modif du nb de matchs affiches
+		 $start = 100 * ($aPage-1);
+		 if ($aOrder) $order = "tosort, tie_schedule, mtch_num LIMIT $start, 100";
+		 else $order = "tie_schedule, mtch_num LIMIT $start, 100";
+		//$start = 48 * ($aPage-1);
+		//if ($aOrder) $order = "tosort, tie_schedule, mtch_num LIMIT $start, 48";
+		//else $order = "tie_schedule, mtch_num LIMIT $start, 48";
+		// DBBN - Fin
+		
 		$res = $this->_select($tables, $fields, $where, $order);
 
 		// Construc a table with the match

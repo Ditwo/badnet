@@ -306,7 +306,9 @@ class Utdate
 	{
 	  $date = mktime($this->_hours, $this->_minutes, $this->_seconds,
 			 $this->_month,$this->_day,  $this->_year, -1 );
+		// DBBN - changement format de date
 		$str = strftime("%d-%m-%y %H:%M", $date);
+		//$str = strftime("%d/%m/%Y %Hh%M", $date);
 	}
       return $str;
     }

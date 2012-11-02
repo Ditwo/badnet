@@ -93,8 +93,7 @@
 			$.getJSON("echauffement.ajax.php", function (data){
 
                 if (data != null) {
-
-				// ajout des nouveaux matchs
+                    // ajout des nouveaux matchs
                     for (d in data) {
                         if ($('div#matchs table#match' + d ).length == 0) {
                             t = $('table#template').clone();

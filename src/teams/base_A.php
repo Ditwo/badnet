@@ -911,14 +911,14 @@ class teamsBase_A extends utbase
 	  			if ($convocation['evnt_convoc'] == WBS_CONVOC_MATCH)
 				//DBBN - debut
 				//$rows[$id]['9'] = $utd->getDateTime();
-	  			$rows[$id]['9'] = $utd->getDateTimeConvoc();
+	  			$rows[$id]['9'] = $utd->getDateTime();
 				//DBBN - fin
 	  			else
 	  			$rows[$id]['9'] = '--';
 	  			$utd->addMinute(-$convocation['evnt_delay']);
 				//DBBN - debut
 				//$rows[$id]['10'] = $utd->getDateTime();
-	  			$rows[$id]['10'] = $utd->getDateTimeConvoc();
+	  			$rows[$id]['10'] = $utd->getDateTime();
 				//DBBN - fin
 	  			if ($convocation['evnt_lieuconvoc'] == '')
 	  			$rows[$id]['11'] = $entry['tie_place'];
