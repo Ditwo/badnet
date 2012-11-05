@@ -57,24 +57,26 @@
     <script type="text/javascript">    
     // <![CDATA[
 
-var mySound;
-soundManager.setup({
-  url: '.',
-  onready: function() {
-    mySound = soundManager.createSound({
-      id: 'aSound',
-      url: 'alarm.mp3'
-    });
-    mySound.play();
-  },
-  ontimeout: function() {
-    // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
-  }
-});
+        var mySound;
+        soundManager.setup({
+            url: '.',
+            useHTML5Audio: true,
+            onready: function() {
+                mySound = soundManager.createSound({
+                    id: 'aSound',
+                    url: 'alarm.mp3'
+                });
+                mySound.play();
+            },
+            ontimeout: function() {
+                // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
+            }
+        });
 
-function biip() {
-mySound.play();
-}
+        function biip() {
+            console.log(mySound);
+            mySound.play();
+        }
 
 		function toggleOptions() {
 			$('div#options').toggle();
@@ -97,14 +99,17 @@ mySound.play();
 					td.css('background-color', 'yellow');
 				} else {
                     
-					if ($('input#flagechauff').attr('checked') && (60*m + s < 1*e + 5) && !(tddrapeau.hasClass('averti'))) {
-                     		 		tddrapeau.slideDown();
-                        			tddrapeau.addClass('averti');
-biip();
-                    			}
-					td.css('background-color', 'red');
-				}
-
+					if ((60*m + s < 1*e + 5) && !(tddrapeau.hasClass('averti'))) {
+                        if ($('input#flagechauff').attr('checked')) {
+                            tddrapeau.slideDown();
+                            tddrapeau.addClass('averti');
+                        }
+                        if ($('input#bipechauff').attr('checked')) {
+                            biip();
+                        }
+    					td.css('background-color', 'red');
+                    }
+                }
 			});
 		}
 
@@ -127,7 +132,7 @@ biip();
                             $('td.court', t).html(data[d].court);
                             $('td.matchnum', t).html(d);
                             $('td.debut', t).html(new Date(data[d].begin*1000).toTimeString().substring(0,5));
-                            $('td.duree', t).attr('begin', data[d].begin*1000);
+                            $('td.duree', t).attr('begin', new Date().getTime().toString() - data[d].duration*1000);
                             $('td.drapeau', t).click(function(){$(this).hide();});
                             t.show();
                         }
@@ -185,6 +190,9 @@ biip();
 
 		$(document).ready(function() {
 			$('#nbcourt').change(update);
+            $('#nummatchsize').change(function(){
+                $('span#next').css('font-size', $('#nummatchsize').val());
+            });
             
 
 			update();
@@ -198,11 +206,19 @@ biip();
 
   </head>
   <body>
-    <div style="text-align: center; font-size: 350%;">Prochain Match :<br /><span id="next" style="font-size: 1000%"></span></div>
+	<div style="float:right;"><a href="javascript:toggleOptions()"><img alt="O" src="settings.png" /></a></div>
 	<div id="options" style="display:none;">
-		<label for="nbcourt">Nombre de courts : </label><input name="nbcourt" id="nbcourt" value="6" size="2" />
-		<label for="echauff">Temps d'échauffement (en secondes) : </label><input name="echauff" id="echauff" value="180" size="5" />
-		<label for="flagechauff">Affichage fin échauffement</label><input type="checkbox" name="flagechauff" id="flagechauff" checked="checked" />
+        <label for="nbcourt">Nombre de courts : </label>
+        <input type="text" name="nbcourt" id="nbcourt" value="6" size="2" /><br />
+        <label for="echauff">Temps d'échauffement (en secondes) : </label>
+        <input type="text" name="echauff" id="echauff" value="180" size="5" /><br />
+        <label for="flagechauff">Affichage fin d'échauffement : </label>
+        <input type="checkbox" name="flagechauff" id="flagechauff" checked="checked" /><br />
+        <label for="bipechauff">Bip en fin d'échauffement : </label>
+        <input type="checkbox" name="bipechauff" id="bipechauff" checked="checked" /><br />
+        <label for="nummatchsize">Taille de la police du numéro de match : </label>
+        <input type="text" name="nummatchsize" id="nummatchsize" value="100%" size="7" />
+
 		<table id="template" style="display:none;">
 			<tr><td rowspan="2" class="court"></td><td class="matchnum">&nbsp;</td></tr>
 			<tr><td class="debut">&nbsp;</td></tr>
@@ -210,8 +226,8 @@ biip();
 			<tr><td colspan="2" class="drapeau">&nbsp;</td></tr>
 		</table>
 	</div>
+    <div style="text-align: center; font-size: 350%;">Prochain Match :<br /><span id="next" style="font-size: 100%"></span></div>
   	<div id="matchs"></div>
 	<div id="temp"></div>
-	<div style="float:right;"><a href="javascript:toggleOptions()">O</a></div>
   </body>
 </html>
