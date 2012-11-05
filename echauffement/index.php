@@ -36,7 +36,7 @@
 
 		div#matchs table td.matchnum {
 			font-size: 250%;
-			padding: 10px;
+			padding: 5px;
 		}
 
 		div#matchs table.terrainvide td.court {
@@ -53,8 +53,29 @@
     //-->
     </style>
     <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="testaudio/soundmanager2-jsmin.js"></script>
     <script type="text/javascript">    
     // <![CDATA[
+
+var mySound;
+soundManager.setup({
+  url: 'testaudio/',
+  onready: function() {
+    mySound = soundManager.createSound({
+      id: 'aSound',
+      url: 'testaudio/alarm.mp3'
+    });
+    mySound.play();
+  },
+  ontimeout: function() {
+    // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
+  }
+});
+
+function biip() {
+mySound.play();
+}
+
 		function toggleOptions() {
 			$('div#options').toggle();
 		}
@@ -75,10 +96,12 @@
 				if (60*m + s < e) {
 					td.css('background-color', 'yellow');
 				} else {
-                    if ((60*m + s < 1*e + 5) && !(tddrapeau.hasClass('averti'))) {
-                        tddrapeau.slideDown();
-                        tddrapeau.addClass('averti');
-                    }
+                    
+					if ($('input#flagechauff').attr('checked') && (60*m + s < 1*e + 5) && !(tddrapeau.hasClass('averti'))) {
+                     		 		tddrapeau.slideDown();
+                        			tddrapeau.addClass('averti');
+biip();
+                    			}
 					td.css('background-color', 'red');
 				}
 
@@ -175,10 +198,11 @@
 
   </head>
   <body>
-    <div style="text-align: center; font-size: 350%;">Prochain Match: <span id="next" style="font-size: 400%"></span></div>
+    <div style="text-align: center; font-size: 350%;">Prochain Match :<br /><span id="next" style="font-size: 1000%"></span></div>
 	<div id="options" style="display:none;">
 		<label for="nbcourt">Nombre de courts : </label><input name="nbcourt" id="nbcourt" value="6" size="2" />
 		<label for="echauff">Temps d'échauffement (en secondes) : </label><input name="echauff" id="echauff" value="180" size="5" />
+		<label for="flagechauff">Affichage fin échauffement</label><input type="checkbox" name="flagechauff" id="flagechauff" checked="checked" />
 		<table id="template" style="display:none;">
 			<tr><td rowspan="2" class="court"></td><td class="matchnum">&nbsp;</td></tr>
 			<tr><td class="debut">&nbsp;</td></tr>
