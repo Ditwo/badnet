@@ -97,8 +97,7 @@
 
 				if (60*m + s < e) {
 					td.css('background-color', 'yellow');
-				} else {
-                    
+                } else {
 					if ((60*m + s < 1*e + 5) && !(tddrapeau.hasClass('averti'))) {
                         if ($('input#flagechauff').attr('checked')) {
                             tddrapeau.slideDown();
@@ -107,8 +106,8 @@
                         if ($('input#bipechauff').attr('checked')) {
                             biip();
                         }
-    					td.css('background-color', 'red');
                     }
+    				td.css('background-color', 'red');
                 }
 			});
 		}
