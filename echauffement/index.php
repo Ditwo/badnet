@@ -227,6 +227,5 @@
     <div style="text-align: center; font-size: 350%;">Prochain Match :<br /><span id="next" style="font-size: 100%"></span></div>
   	<div id="matchs"></div>
     <div id="temp"></div>
-<a href="javascript:biip()">bip</a>
   </body>
 </html>
