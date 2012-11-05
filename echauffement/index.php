@@ -53,7 +53,7 @@
     //-->
     </style>
     <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="soundmanager2-jsmin.js"></script>
+    <script type="text/javascript" src="soundmanager2.js"></script>
     <script type="text/javascript">    
     // <![CDATA[
 
@@ -74,7 +74,6 @@
         });
 
         function biip() {
-            console.log(mySound);
             mySound.play();
         }
 
@@ -197,7 +196,7 @@
 			update();
 
 			setInterval(tick, 1000);
-			setInterval(update, 10000);
+			setInterval(update, 20000);
 
 		});
     //]>
@@ -227,6 +226,7 @@
 	</div>
     <div style="text-align: center; font-size: 350%;">Prochain Match :<br /><span id="next" style="font-size: 100%"></span></div>
   	<div id="matchs"></div>
-	<div id="temp"></div>
+    <div id="temp"></div>
+<a href="javascript:biip()">bip</a>
   </body>
 </html>
