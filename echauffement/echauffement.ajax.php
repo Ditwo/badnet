@@ -2,7 +2,7 @@
 
 header("Cache-Control: no-cache, must-revalidate");
 
-define('BN_CONFIG_FILE', 'Conf/Conf.ini');
+define('BN_CONFIG_FILE', '../Conf/Conf.ini');
 
 $config = parse_ini_file(BN_CONFIG_FILE, true);
 $prefix = $config['database']['prefix'];
