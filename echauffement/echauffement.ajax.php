@@ -89,7 +89,7 @@ class SPDO {
 
 try
 {
-    $sql = "SELECT mtch_num, mtch_begin, mtch_court
+    $sql = "SELECT mtch_num, mtch_begin, now() as mtch_now, mtch_court
 			FROM ${prefix}matchs
 			WHERE mtch_court <> 0
 				AND mtch_score is null
@@ -99,7 +99,8 @@ try
 
     foreach ($select as $row) {
 		$begin = strtotime($row['mtch_begin']);
-		$result[$row['mtch_num']] = array("court" => $row['mtch_court'], "begin" => $begin);
+		$duration = strtotime($row['mtch_now']) - strtotime($row['mtch_begin']);
+		$result[$row['mtch_num']] = array("court" => $row['mtch_court'], "begin" => $begin, "duration" => $duration);
 	}
 
     if ($result != null) {
