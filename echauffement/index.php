@@ -53,17 +53,17 @@
     //-->
     </style>
     <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="testaudio/soundmanager2-jsmin.js"></script>
+    <script type="text/javascript" src="soundmanager2-jsmin.js"></script>
     <script type="text/javascript">    
     // <![CDATA[
 
 var mySound;
 soundManager.setup({
-  url: 'testaudio/',
+  url: '.',
   onready: function() {
     mySound = soundManager.createSound({
       id: 'aSound',
-      url: 'testaudio/alarm.mp3'
+      url: 'alarm.mp3'
     });
     mySound.play();
   },
