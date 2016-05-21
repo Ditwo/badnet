@@ -48,7 +48,7 @@ class SPDO {
     }
 
     /**
-     * Crée et retourne l'objet SPDO
+     * CrÃ©e et retourne l'objet SPDO
      *
      * @access public
      * @static
@@ -65,9 +65,9 @@ class SPDO {
     }
 
     /**
-     * Exécute une requête SQL avec PDO
+     * ExÃ©cute une requÃªte SQL avec PDO
      *
-     * @param string $query La requête SQL
+     * @param string $query La requÃªte SQL
      * @return PDOStatement Retourne l'objet PDOStatement
      */
     public static function query($query)
@@ -76,9 +76,9 @@ class SPDO {
     }
 
     /**
-     * Prepare une requête SQL avec PDO
+     * Prepare une requÃªte SQL avec PDO
      *
-     * @param string $query La requête SQL
+     * @param string $query La requÃªte SQL
      * @return PDOStatement Retourne l'objet PDOStatement
      */
     public static function prepare($query)
@@ -92,8 +92,8 @@ try
     $sql = "SELECT mtch_num, mtch_begin, now() as mtch_now, mtch_court
 			FROM ${prefix}matchs
 			WHERE mtch_court <> 0
-				AND mtch_score is null
-                ORDER BY mtch_begin asc";
+				AND (mtch_score is null OR mtch_score='')
+        	ORDER BY mtch_begin asc";
 
     $select = SPDO::query($sql);
 
